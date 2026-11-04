@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="মছজিদ্দা গ্রামার স্কুল, ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম। শিক্ষা, শৃঙ্খলা ও নৈতিকতার সমন্বয়ে মানসম্মত শিক্ষা।">
+<title>মছজিদ্দা গ্রামার স্কুল | Masjidda Grammar School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#102b50;--blue:#1765a8;--gold:#e5b653;--light:#f4f7fb;--ink:#203047}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'Hind Siliguri',sans-serif;color:var(--ink);line-height:1.7}
+a{text-decoration:none;color:inherit}
+.topbar{background:#0b1e38;color:#fff;padding:8px 6%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+header{background:white;position:sticky;top:0;z-index:20;box-shadow:0 3px 15px #102b5012}
+.nav{max-width:1200px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:53px;height:53px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:Georgia;font-size:23px;font-weight:bold;border:3px solid var(--gold)}
+.brand h1{font-size:20px;color:var(--navy);line-height:1.3}
+.brand small{font-size:12px;color:#66758a}
+nav{display:flex;align-items:center;gap:20px;font-size:14px;font-weight:600}
+nav a:hover{color:var(--blue)}
+.admit{background:var(--gold);color:#132d4d;padding:9px 17px;border-radius:5px}
+.menu{display:none;background:var(--navy);color:white;border:0;padding:8px 12px;border-radius:5px;font-size:20px}
+.hero{background:linear-gradient(115deg,#0b2343f5,#174f80eF),linear-gradient(45deg,#1a4d78,#102b50);color:white;padding:85px 7%;min-height:470px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero:after{content:"MGS";position:absolute;right:5%;bottom:-65px;font-family:Georgia;font-size:250px;font-weight:bold;color:#ffffff0b}
+.hero-content{max-width:750px;position:relative;z-index:1}
+.eyebrow{color:var(--gold);font-weight:600;letter-spacing:2px;font-size:14px}
+.hero h2{font-size:clamp(34px,6vw,58px);line-height:1.25;margin:17px 0}
+.hero h2 span{color:var(--gold)}
+.hero p{font-size:18px;color:#e2eaf3;max-width:620px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:27px}
+.btn{display:inline-block;padding:12px 24px;border-radius:5px;font-weight:600;background:var(--gold);color:#102b50}
+.btn-outline{border:1px solid #fff;color:white;padding:11px 23px;border-radius:5px}
+.stats{max-width:1050px;margin:-35px auto 0;position:relative;z-index:2;background:white;box-shadow:0 8px 30px #102b5015;border-radius:10px;display:grid;grid-template-columns:repeat(3,1fr);padding:25px}
+.stat{text-align:center;border-right:1px solid #e5eaf0}
+.stat:last-child{border:0}
+.stat strong{display:block;font-size:28px;color:var(--blue)}
+.stat span{color:#64748b;font-size:14px}
+section{padding:75px 7%}
+.container{max-width:1120px;margin:auto}
+.section-title{text-align:center;margin-bottom:38px}
+.section-title small{color:var(--blue);font-weight:700;letter-spacing:2px}
+.section-title h2{font-size:32px;color:var(--navy);margin:7px 0}
+.section-title p{color:#718096}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.about-card{background:linear-gradient(140deg,#102b50,#1c6397);color:white;border-radius:12px;padding:38px;min-height:260px;display:flex;flex-direction:column;justify-content:center}
+.about-card .big{font-size:58px;color:var(--gold);font-family:Georgia;font-weight:bold}
+.about-text h3{font-size:25px;color:var(--navy);margin-bottom:12px}
+.about-text p{color:#637286;margin-bottom:12px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{padding:25px;background:white;border:1px solid #e7edf4;border-radius:9px;transition:.2s}
+.feature:hover{transform:translateY(-4px);box-shadow:0 10px 25px #102b5010}
+.feature .ico{font-size:30px}
+.feature h3{color:var(--navy);margin:9px 0}
+.feature p{font-size:14px;color:#69788c}
+.academic{background:var(--light)}
+.classes{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.class-box{background:white;padding:22px;text-align:center;border-radius:8px;border-bottom:3px solid var(--gold);font-size:18px;font-weight:600;color:var(--navy)}
+.class-box span{display:block;font-size:12px;color:#8391a4;font-weight:400}
+.admission{background:linear-gradient(110deg,#102b50,#18568b);color:white;text-align:center}
+.admission h2{font-size:32px;color:white;margin-bottom:10px}
+.admission p{color:#e1eaf3;margin-bottom:22px}
+.notice{background:var(--light)}
+.notice-card{max-width:800px;margin:auto;background:white;border-radius:9px;padding:25px;border:1px solid #e5eaf0}
+.notice-item{padding:14px 8px;border-bottom:1px solid #edf0f4;display:flex;gap:14px;align-items:center}
+.notice-item:last-child{border:0}
+.notice-date{background:#edf4fc;color:var(--blue);padding:8px;border-radius:6px;font-size:12px;white-space:nowrap}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.gallery-box{height:170px;border-radius:9px;background:linear-gradient(140deg,#dce9f7,#f2e6c9);display:grid;place-items:center;font-size:42px}
+.contact{background:#f5f8fc}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contact-box{background:white;padding:24px;border-radius:9px;text-align:center}
+.contact-box strong{display:block;color:var(--navy);font-size:18px}
+.contact-box p{color:#718096;font-size:14px}
+footer{background:#091b33;color:#d9e2ee;padding:40px 7% 18px}
+.footer-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer h3{color:var(--gold);margin-bottom:12px}
+footer p,footer a{font-size:14px;color:#c2cede}
+footer a{display:block;margin:5px 0}
+.copyright{text-align:center;border-top:1px solid #ffffff22;margin-top:25px;padding-top:15px;font-size:12px}
+@media(max-width:850px){nav{display:none;position:absolute;top:75px;left:0;right:0;background:white;padding:20px;box-shadow:0 8px 15px #0002;flex-direction:column;align-items:stretch}nav.open{display:flex}.menu{display:block}.about-grid{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.classes{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.topbar{justify-content:center;font-size:11px}.brand h1{font-size:16px}.brand small{font-size:10px}.logo{width:45px;height:45px}.hero{padding:65px 7%;min-height:420px}.hero p{font-size:16px}.stats{margin:-20px 12px 0;padding:17px 5px}.stat strong{font-size:21px}.stat span{font-size:11px}section{padding:55px 6%}.section-title h2{font-size:27px}.features{grid-template-columns:1fr}.classes{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-box{height:125px}.contact-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.notice-item{align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>📍 ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</span><span>🎓 শিক্ষা • শৃঙ্খলা • নৈতিকতা</span></div>
+<header>
+<div class="nav">
+<a href="#home" class="brand"><div class="logo">MGS</div><div><h1>মছজিদ্দা গ্রামার স্কুল</h1><small>MASJIDDA GRAMMAR SCHOOL</small></div></a>
+<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">☰</button>
+<nav>
+<a href="#home" onclick="closeNav()">হোম</a><a href="#about" onclick="closeNav()">আমাদের সম্পর্কে</a><a href="#academic" onclick="closeNav()">একাডেমিক</a><a href="#admission" onclick="closeNav()">ভর্তি</a><a href="#notice" onclick="closeNav()">নোটিশ</a><a href="#contact" onclick="closeNav()">যোগাযোগ</a>
+</nav>
+</div>
+</header>
+<main>
+<div class="hero" id="home"><div class="hero-content">
+<div class="eyebrow">WELCOME TO MASJIDDA GRAMMAR SCHOOL</div>
+<h2>শিক্ষার আলোয় গড়ি<br><span>আগামীর সুন্দর ভবিষ্যৎ</span></h2>
+<p>জ্ঞান, নৈতিকতা, শৃঙ্খলা ও সৃজনশীলতার সমন্বয়ে প্রতিটি শিক্ষার্থীর সম্ভাবনা বিকাশে আমাদের অঙ্গীকার।</p>
+<div class="actions"><a class="btn" href="#admission">ভর্তি তথ্য জানুন →</a><a class="btn-outline" href="#about">আমাদের সম্পর্কে</a></div>
+</div></div>
+<div class="stats">
+<div class="stat"><strong>২০১৭</strong><span>প্রতিষ্ঠাকাল</span></div>
+<div class="stat"><strong>Play–7</strong><span>শ্রেণি কার্যক্রম</span></div>
+<div class="stat"><strong>MGS</strong><span>আমাদের পরিচয়</span></div>
+</div>
+<section id="about"><div class="container">
+<div class="section-title"><small>ABOUT OUR SCHOOL</small><h2>আমাদের সম্পর্কে</h2><p>একটি সুন্দর শিক্ষা পরিবেশ, একটি উজ্জ্বল ভবিষ্যৎ</p></div>
+<div class="about-grid"><div class="about-text"><h3>মছজিদ্দা গ্রামার স্কুল</h3><p>মছজিদ্দা গ্রামার স্কুল একটি শিক্ষাপ্রতিষ্ঠান, যেখানে শিক্ষার্থীদের মানসম্মত শিক্ষা, নৈতিক মূল্যবোধ, শৃঙ্খলা ও সৃজনশীল বিকাশে গুরুত্ব দেওয়া হয়।</p><p>২০১৭ সালে যাত্রা শুরু করা প্রতিষ্ঠানটি Play থেকে সপ্তম শ্রেণি পর্যন্ত শিক্ষার্থীদের শিক্ষার সুযোগ দিয়ে আসছে।</p><p>আমাদের লক্ষ্য প্রতিটি শিক্ষার্থীকে জ্ঞান, দক্ষতা ও মানবিক গুণাবলিতে সমৃদ্ধ করে গড়ে তোলা।</p></div>
+<div class="about-card"><div class="big">MGS</div><h2>Learn • Grow • Shine</h2><p>শিক্ষা, সততা ও সাফল্যের পথে একসঙ্গে।</p></div></div>
+</div></section>
+<section class="academic" id="academic"><div class="container">
+<div class="section-title"><small>ACADEMIC PROGRAM</small><h2>আমাদের একাডেমিক কার্যক্রম</h2><p>শিশুর প্রাথমিক বিকাশ থেকে ধারাবাহিক শিক্ষার যাত্রা</p></div>
+<div class="classes">
+<div class="class-box">Play<span>প্রাক-প্রাথমিক</span></div><div class="class-box">Nursery<span>প্রাক-প্রাথমিক</span></div><div class="class-box">Class One<span>প্রথম শ্রেণি</span></div><div class="class-box">Class Two<span>দ্বিতীয় শ্রেণি</span></div><div class="class-box">Class Three<span>তৃতীয় শ্রেণি</span></div><div class="class-box">Class Four<span>চতুর্থ শ্রেণি</span></div><div class="class-box">Class Five<span>পঞ্চম শ্রেণি</span></div><div class="class-box">Class Six–Seven<span>ষষ্ঠ ও সপ্তম শ্রেণি</span></div>
+</div></div></section>
+<section><div class="container">
+<div class="section-title"><small>WHY CHOOSE US</small><h2>আমাদের বৈশিষ্ট্য</h2></div>
+<div class="features">
+<div class="feature"><div class="ico">📚</div><h3>মানসম্মত শিক্ষা</h3><p>পাঠ্যক্রমভিত্তিক পাঠদান ও নিয়মিত মূল্যায়ন।</p></div>
+<div class="feature"><div class="ico">👩‍🏫</div><h3>অভিজ্ঞ শিক্ষক</h3><p>শিক্ষার্থীদের যত্নসহকারে পাঠদানের প্রতি গুরুত্ব।</p></div>
+<div class="feature"><div class="ico">🌱</div><h3>নৈতিক শিক্ষা</h3><p>সততা, শৃঙ্খলা ও মানবিক মূল্যবোধের চর্চা।</p></div>
+<div class="feature"><div class="ico">📝</div><h3>নিয়মিত মূল্যায়ন</h3><p>শিক্ষার্থীদের অগ্রগতি পর্যবেক্ষণ ও উন্নয়নে সহযোগিতা।</p></div>
+<div class="feature"><div class="ico">🎨</div><h3>সৃজনশীল বিকাশ</h3><p>জ্ঞানচর্চা ও সৃজনশীল কর্মকাণ্ডে উৎসাহ।</p></div>
+<div class="feature"><div class="ico">🤝</div><h3>অভিভাবক যোগাযোগ</h3><p>শিক্ষার্থীর অগ্রগতিতে পরিবার ও বিদ্যালয়ের সহযোগিতা।</p></div>
+</div></div></section>
+<section class="admission" id="admission"><div class="container"><h2>আপনার সন্তানের শিক্ষার যাত্রা শুরু হোক MGS-এ</h2><p>ভর্তি, শ্রেণি, প্রয়োজনীয় কাগজপত্র ও অন্যান্য তথ্য জানতে বিদ্যালয়ের সঙ্গে যোগাযোগ করুন।</p><a class="btn" href="#contact">ভর্তি সংক্রান্ত যোগাযোগ</a></div></section>
+<section class="notice" id="notice"><div class="container"><div class="section-title"><small>NOTICE BOARD</small><h2>নোটিশ বোর্ড</h2><p>বিদ্যালয়ের গুরুত্বপূর্ণ ঘোষণা ও আপডেট</p></div>
+<div class="notice-card"><div class="notice-item"><div class="notice-date">NOTICE</div><div>নতুন নোটিশ প্রকাশিত হলে এখানে যুক্ত করা হবে।</div></div><div class="notice-item"><div class="notice-date">UPDATE</div><div>পরীক্ষার রুটিন ও ফলাফল সংক্রান্ত তথ্য এখানে প্রকাশ করা হবে।</div></div><div class="notice-item"><div class="notice-date">INFO</div><div>ভর্তি সংক্রান্ত তথ্যের জন্য বিদ্যালয় অফিসে যোগাযোগ করুন।</div></div></div>
+</div></section>
+<section id="gallery"><div class="container"><div class="section-title"><small>SCHOOL GALLERY</small><h2>আমাদের গ্যালারি</h2><p>বিদ্যালয়ের কার্যক্রম ও স্মরণীয় মুহূর্ত</p></div><div class="gallery-grid"><div class="gallery-box">🏫</div><div class="gallery-box">📖</div><div class="gallery-box">🎓</div><div class="gallery-box">🧑‍🎓</div><div class="gallery-box">🌳</div><div class="gallery-box">🏆</div></div><p style="text-align:center;color:#718096;margin-top:15px;font-size:13px">প্রকৃত বিদ্যালয়ের ছবি পরবর্তীতে এখানে যুক্ত করা যাবে।</p></div></section>
+<section class="contact" id="contact"><div class="container"><div class="section-title"><small>CONTACT US</small><h2>যোগাযোগ করুন</h2><p>আমাদের সঙ্গে যোগাযোগ করতে নিচের তথ্য ব্যবহার করুন</p></div>
+<div class="contact-grid"><div class="contact-box"><strong>📍 ঠিকানা</strong><p>ছোট কুমিরা, সীতাকুণ্ড,<br>চট্টগ্রাম, বাংলাদেশ</p></div><div class="contact-box"><strong>📞 ফোন</strong><p>বিদ্যালয়ের অফিসিয়াল নম্বর<br>এখানে যুক্ত করা হবে</p></div><div class="contact-box"><strong>✉️ ইমেইল</strong><p>বিদ্যালয়ের অফিসিয়াল ইমেইল<br>এখানে যুক্ত করা হবে</p></div></div>
+</div></section>
+</main>
+<footer><div class="footer-grid"><div><h3>মছজিদ্দা গ্রামার স্কুল</h3><p>শিক্ষা, শৃঙ্খলা ও নৈতিকতার সমন্বয়ে আগামী প্রজন্মকে গড়ে তোলাই আমাদের প্রত্যয়।</p></div><div><h3>গুরুত্বপূর্ণ লিংক</h3><a href="#about">আমাদের সম্পর্কে</a><a href="#academic">একাডেমিক</a><a href="#admission">ভর্তি</a></div><div><h3>যোগাযোগ</h3><p>ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</p><a href="#contact">যোগাযোগের তথ্য</a></div></div><div class="copyright">© <span id="year"></span> Masjidda Grammar School. All Rights Reserved.</div></footer>
+<script>
+function closeNav(){document.querySelector('nav').classList.remove('open')}
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
