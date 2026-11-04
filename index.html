@@ -1,146 +1,780 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="মছজিদ্দা গ্রামার স্কুল, ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম। শিক্ষা, শৃঙ্খলা ও নৈতিকতার সমন্বয়ে মানসম্মত শিক্ষা।">
+<meta name="theme-color" content="#102b50">
+<meta name="description" content="মছজিদ্দা গ্রামার স্কুল, ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম। মানসম্মত শিক্ষা, শৃঙ্খলা ও নৈতিকতার সমন্বয়ে শিক্ষার অঙ্গীকার।">
 <title>মছজিদ্দা গ্রামার স্কুল | Masjidda Grammar School</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--navy:#102b50;--blue:#1765a8;--gold:#e5b653;--light:#f4f7fb;--ink:#203047}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{font-family:'Hind Siliguri',sans-serif;color:var(--ink);line-height:1.7}
+:root {
+  --navy:#102b50;
+  --navy2:#173f6b;
+  --blue:#2169a6;
+  --gold:#e5b653;
+  --light:#f4f7fb;
+  --white:#fff;
+  --text:#26364a;
+  --muted:#718096;
+  --border:#e5eaf0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  font-family:'Hind Siliguri',sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.7;
+  padding-bottom:85px;
+}
 a{text-decoration:none;color:inherit}
-.topbar{background:#0b1e38;color:#fff;padding:8px 6%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
-header{background:white;position:sticky;top:0;z-index:20;box-shadow:0 3px 15px #102b5012}
-.nav{max-width:1200px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+img{max-width:100%}
+.container{width:min(1160px,92%);margin:auto}
+
+/* TOP INFORMATION BAR */
+.topbar{
+  background:#091d36;color:#eaf0f7;
+  padding:7px 4%;font-size:13px;
+}
+.topbar-inner{
+  max-width:1160px;margin:auto;
+  display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:8px;
+}
+
+/* HEADER */
+.header{
+  background:#fff;position:sticky;top:0;
+  z-index:1000;box-shadow:0 3px 15px #102b5010;
+}
+.navbar{
+  max-width:1200px;margin:auto;
+  min-height:82px;padding:10px 4%;
+  display:flex;align-items:center;
+  justify-content:space-between;gap:15px;
+}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:53px;height:53px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:Georgia;font-size:23px;font-weight:bold;border:3px solid var(--gold)}
-.brand h1{font-size:20px;color:var(--navy);line-height:1.3}
-.brand small{font-size:12px;color:#66758a}
-nav{display:flex;align-items:center;gap:20px;font-size:14px;font-weight:600}
-nav a:hover{color:var(--blue)}
-.admit{background:var(--gold);color:#132d4d;padding:9px 17px;border-radius:5px}
-.menu{display:none;background:var(--navy);color:white;border:0;padding:8px 12px;border-radius:5px;font-size:20px}
-.hero{background:linear-gradient(115deg,#0b2343f5,#174f80eF),linear-gradient(45deg,#1a4d78,#102b50);color:white;padding:85px 7%;min-height:470px;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero:after{content:"MGS";position:absolute;right:5%;bottom:-65px;font-family:Georgia;font-size:250px;font-weight:bold;color:#ffffff0b}
-.hero-content{max-width:750px;position:relative;z-index:1}
-.eyebrow{color:var(--gold);font-weight:600;letter-spacing:2px;font-size:14px}
-.hero h2{font-size:clamp(34px,6vw,58px);line-height:1.25;margin:17px 0}
+.logo-box{
+  width:58px;height:58px;border-radius:50%;
+  background:var(--navy);border:3px solid var(--gold);
+  display:grid;place-items:center;overflow:hidden;
+  color:var(--gold);font-family:Georgia,serif;
+  font-size:20px;font-weight:bold;flex-shrink:0;
+}
+.logo-box img{width:100%;height:100%;object-fit:contain;background:white}
+.brand-name h1{
+  color:var(--navy);font-size:20px;line-height:1.3;
+}
+.brand-name p{
+  color:#75849a;font-family:Georgia,serif;
+  font-size:11px;letter-spacing:1px;
+}
+.nav-links{
+  display:flex;align-items:center;gap:19px;
+  list-style:none;font-size:14px;font-weight:600;
+}
+.nav-links a:hover{color:var(--blue)}
+.nav-admission{
+  background:var(--gold);color:var(--navy);
+  padding:9px 15px;border-radius:5px;
+}
+.menu-toggle{
+  display:none;background:var(--navy);color:white;
+  border:0;border-radius:5px;padding:8px 13px;
+  font-size:22px;cursor:pointer;
+}
+
+/* HERO BANNER */
+.hero{
+  min-height:540px;position:relative;
+  display:flex;align-items:center;color:white;
+  background:
+    linear-gradient(90deg,rgba(8,28,54,.94),rgba(12,43,77,.72),rgba(12,43,77,.28)),
+    url('assets/hero.jpg') center/cover no-repeat,
+    linear-gradient(120deg,#102b50,#28699d);
+}
+.hero-content{max-width:1160px;width:92%;margin:auto;padding:75px 0}
+.hero-tag{
+  display:inline-block;color:var(--gold);
+  border:1px solid #e5b65380;padding:6px 14px;
+  border-radius:30px;font-size:13px;letter-spacing:1px;
+}
+.hero h2{
+  font-size:clamp(35px,5.5vw,62px);
+  line-height:1.3;margin:22px 0 14px;
+  max-width:760px;font-weight:700;
+}
 .hero h2 span{color:var(--gold)}
-.hero p{font-size:18px;color:#e2eaf3;max-width:620px}
-.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:27px}
-.btn{display:inline-block;padding:12px 24px;border-radius:5px;font-weight:600;background:var(--gold);color:#102b50}
-.btn-outline{border:1px solid #fff;color:white;padding:11px 23px;border-radius:5px}
-.stats{max-width:1050px;margin:-35px auto 0;position:relative;z-index:2;background:white;box-shadow:0 8px 30px #102b5015;border-radius:10px;display:grid;grid-template-columns:repeat(3,1fr);padding:25px}
-.stat{text-align:center;border-right:1px solid #e5eaf0}
+.hero p{max-width:650px;color:#e3ebf4;font-size:18px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.btn{
+  display:inline-block;padding:12px 24px;
+  border-radius:5px;font-weight:700;
+  transition:.2s;
+}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-outline{border:1px solid white;color:white}
+.btn:hover{transform:translateY(-3px)}
+
+/* QUICK STATS */
+.stats{
+  position:relative;z-index:2;
+  max-width:1000px;margin:-35px auto 0;
+  background:white;border-radius:10px;
+  box-shadow:0 8px 30px #102b5020;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  padding:25px 12px;
+}
+.stat{text-align:center;border-right:1px solid var(--border)}
 .stat:last-child{border:0}
-.stat strong{display:block;font-size:28px;color:var(--blue)}
-.stat span{color:#64748b;font-size:14px}
-section{padding:75px 7%}
-.container{max-width:1120px;margin:auto}
-.section-title{text-align:center;margin-bottom:38px}
-.section-title small{color:var(--blue);font-weight:700;letter-spacing:2px}
-.section-title h2{font-size:32px;color:var(--navy);margin:7px 0}
-.section-title p{color:#718096}
-.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
-.about-card{background:linear-gradient(140deg,#102b50,#1c6397);color:white;border-radius:12px;padding:38px;min-height:260px;display:flex;flex-direction:column;justify-content:center}
-.about-card .big{font-size:58px;color:var(--gold);font-family:Georgia;font-weight:bold}
-.about-text h3{font-size:25px;color:var(--navy);margin-bottom:12px}
-.about-text p{color:#637286;margin-bottom:12px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.feature{padding:25px;background:white;border:1px solid #e7edf4;border-radius:9px;transition:.2s}
-.feature:hover{transform:translateY(-4px);box-shadow:0 10px 25px #102b5010}
-.feature .ico{font-size:30px}
-.feature h3{color:var(--navy);margin:9px 0}
-.feature p{font-size:14px;color:#69788c}
-.academic{background:var(--light)}
-.classes{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.class-box{background:white;padding:22px;text-align:center;border-radius:8px;border-bottom:3px solid var(--gold);font-size:18px;font-weight:600;color:var(--navy)}
-.class-box span{display:block;font-size:12px;color:#8391a4;font-weight:400}
-.admission{background:linear-gradient(110deg,#102b50,#18568b);color:white;text-align:center}
-.admission h2{font-size:32px;color:white;margin-bottom:10px}
-.admission p{color:#e1eaf3;margin-bottom:22px}
-.notice{background:var(--light)}
-.notice-card{max-width:800px;margin:auto;background:white;border-radius:9px;padding:25px;border:1px solid #e5eaf0}
-.notice-item{padding:14px 8px;border-bottom:1px solid #edf0f4;display:flex;gap:14px;align-items:center}
+.stat strong{display:block;color:var(--blue);font-size:29px}
+.stat span{font-size:14px;color:var(--muted)}
+
+/* COMMON SECTION */
+section{padding:75px 0}
+.section-heading{text-align:center;margin-bottom:38px}
+.section-heading small{
+  color:var(--blue);font-weight:700;letter-spacing:2px;
+}
+.section-heading h2{
+  color:var(--navy);font-size:34px;margin:6px 0;
+}
+.section-heading p{color:var(--muted)}
+.gold-line{
+  width:65px;height:3px;background:var(--gold);
+  margin:12px auto;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:45px;align-items:center;
+}
+.about-photo{
+  min-height:320px;border-radius:12px;
+  background:linear-gradient(135deg,#153d68,#d5b66e);
+  display:grid;place-items:center;
+  color:white;font-size:60px;
+  overflow:hidden;
+}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about-text h3{font-size:27px;color:var(--navy);margin-bottom:12px}
+.about-text p{color:#68788b;margin-bottom:13px}
+.signature{
+  margin-top:20px;border-left:4px solid var(--gold);
+  padding-left:15px;
+}
+.signature strong{display:block;color:var(--navy)}
+.signature small{color:var(--muted)}
+
+/* FEATURES */
+.features-section{background:var(--light)}
+.feature-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.feature-card{
+  background:white;border:1px solid var(--border);
+  border-radius:10px;padding:27px 22px;
+  transition:.25s;
+}
+.feature-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px #102b5015;
+}
+.feature-icon{font-size:32px}
+.feature-card h3{color:var(--navy);margin:10px 0 5px}
+.feature-card p{font-size:14px;color:var(--muted)}
+
+/* ACADEMIC */
+.class-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:15px;
+}
+.class-card{
+  border:1px solid var(--border);border-radius:9px;
+  text-align:center;padding:23px 10px;
+  background:white;border-bottom:3px solid var(--gold);
+}
+.class-card strong{display:block;color:var(--navy);font-size:19px}
+.class-card span{font-size:13px;color:var(--muted)}
+
+/* ADMISSION */
+.admission-section{
+  background:linear-gradient(110deg,#102b50,#1b578c);
+  color:white;text-align:center;
+}
+.admission-section h2{font-size:32px;margin-bottom:10px}
+.admission-section p{color:#e1eaf3;margin-bottom:22px}
+.admission-section .btn{margin-top:8px}
+
+/* NOTICE */
+.notice-section{background:var(--light)}
+.notice-card{
+  max-width:850px;margin:auto;background:white;
+  border:1px solid var(--border);border-radius:10px;
+  padding:12px 25px;
+}
+.notice-item{
+  display:flex;align-items:center;gap:15px;
+  padding:16px 5px;border-bottom:1px solid var(--border);
+}
 .notice-item:last-child{border:0}
-.notice-date{background:#edf4fc;color:var(--blue);padding:8px;border-radius:6px;font-size:12px;white-space:nowrap}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.gallery-box{height:170px;border-radius:9px;background:linear-gradient(140deg,#dce9f7,#f2e6c9);display:grid;place-items:center;font-size:42px}
-.contact{background:#f5f8fc}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.contact-box{background:white;padding:24px;border-radius:9px;text-align:center}
-.contact-box strong{display:block;color:var(--navy);font-size:18px}
-.contact-box p{color:#718096;font-size:14px}
-footer{background:#091b33;color:#d9e2ee;padding:40px 7% 18px}
-.footer-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
-footer h3{color:var(--gold);margin-bottom:12px}
-footer p,footer a{font-size:14px;color:#c2cede}
-footer a{display:block;margin:5px 0}
-.copyright{text-align:center;border-top:1px solid #ffffff22;margin-top:25px;padding-top:15px;font-size:12px}
-@media(max-width:850px){nav{display:none;position:absolute;top:75px;left:0;right:0;background:white;padding:20px;box-shadow:0 8px 15px #0002;flex-direction:column;align-items:stretch}nav.open{display:flex}.menu{display:block}.about-grid{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.classes{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:560px){.topbar{justify-content:center;font-size:11px}.brand h1{font-size:16px}.brand small{font-size:10px}.logo{width:45px;height:45px}.hero{padding:65px 7%;min-height:420px}.hero p{font-size:16px}.stats{margin:-20px 12px 0;padding:17px 5px}.stat strong{font-size:21px}.stat span{font-size:11px}section{padding:55px 6%}.section-title h2{font-size:27px}.features{grid-template-columns:1fr}.classes{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-box{height:125px}.contact-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.notice-item{align-items:flex-start}}
+.notice-label{
+  background:#edf4fc;color:var(--blue);
+  border-radius:5px;padding:7px 12px;
+  font-size:12px;font-weight:700;white-space:nowrap;
+}
+.notice-item p{font-size:15px}
+
+/* TEACHERS */
+.teacher-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.teacher-card{
+  border:1px solid var(--border);border-radius:10px;
+  padding:25px;text-align:center;background:white;
+}
+.teacher-avatar{
+  width:90px;height:90px;margin:0 auto 13px;
+  border-radius:50%;background:#edf3fa;
+  display:grid;place-items:center;font-size:35px;
+}
+.teacher-card h3{color:var(--navy)}
+.teacher-card p{font-size:13px;color:var(--muted)}
+
+/* GALLERY */
+.gallery-section{background:var(--light)}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:15px;
+}
+.gallery-item{
+  min-height:180px;border-radius:9px;
+  background:linear-gradient(135deg,#dce9f7,#f2e6c9);
+  display:grid;place-items:center;font-size:42px;
+  overflow:hidden;
+}
+.gallery-item img{width:100%;height:100%;object-fit:cover}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+.contact-card{
+  background:white;border:1px solid var(--border);
+  border-radius:9px;padding:25px;text-align:center;
+}
+.contact-card .icon{font-size:29px}
+.contact-card h3{color:var(--navy);margin:7px 0}
+.contact-card p{font-size:14px;color:var(--muted)}
+
+/* FOOTER */
+.footer{background:#091d36;color:#dbe4ef;padding:45px 0 15px}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr;
+  gap:30px;
+}
+.footer h3{color:var(--gold);margin-bottom:12px}
+.footer p,.footer a{font-size:14px;color:#c4d0df}
+.footer a{display:block;margin:5px 0}
+.copyright{
+  border-top:1px solid #ffffff25;
+  text-align:center;margin-top:28px;padding-top:15px;
+  font-size:12px;color:#bdcada;
+}
+
+/* FIXED E-SERVICE MENU */
+.menu-wrapper{
+  position:fixed;bottom:0;left:0;width:100%;
+  background:#fff;
+  box-shadow:0 -3px 18px rgba(0,0,0,.13);
+  z-index:9999;
+  padding:9px 0 calc(9px + env(safe-area-inset-bottom));
+}
+.menu-container{
+  display:flex;justify-content:center;align-items:center;
+  gap:10px;width:96%;max-width:800px;margin:auto;
+}
+.menu-card{
+  background:white;border-radius:8px;flex:1;
+  min-width:0;padding:12px 8px;
+  display:flex;flex-direction:row;
+  align-items:center;justify-content:center;
+  gap:8px;border:1px solid #e1e1e1;
+  text-decoration:none;cursor:pointer;
+  transition:background .2s,transform .2s;
+}
+.menu-card:active{background:#f1f1f1;transform:scale(.98)}
+.icon-svg{width:21px;height:21px;fill:currentColor;flex-shrink:0}
+.menu-title{font-size:15px;font-weight:700;line-height:1;white-space:nowrap}
+.admission-btn-card{color:#d93025;border-bottom:3px solid #d93025}
+.message-btn-card{color:#0f9d58;border-bottom:3px solid #0f9d58}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:900px){
+  .menu-toggle{display:block}
+  .nav-links{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    background:white;padding:20px 5%;
+    box-shadow:0 8px 15px #0002;
+    flex-direction:column;align-items:stretch;gap:13px;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{display:block;padding:5px}
+  .about-grid{grid-template-columns:1fr}
+  .features-section .feature-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  body{padding-bottom:82px}
+  .topbar-inner{justify-content:center;font-size:11px}
+  .navbar{min-height:72px}
+  .logo-box{width:46px;height:46px;font-size:17px}
+  .brand-name h1{font-size:16px}
+  .brand-name p{font-size:9px}
+  .hero{min-height:480px;background-position:center}
+  .hero-content{padding:65px 0}
+  .hero h2{font-size:36px}
+  .hero p{font-size:15px}
+  .stats{margin:-20px 12px 0;padding:17px 5px}
+  .stat strong{font-size:22px}
+  .stat span{font-size:11px}
+  section{padding:55px 0}
+  .section-heading h2{font-size:27px}
+  .features-section .feature-grid{grid-template-columns:1fr}
+  .class-grid{grid-template-columns:repeat(2,1fr)}
+  .teacher-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-item{min-height:125px}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .menu-container{gap:7px;width:97%}
+  .menu-card{padding:12px 5px;gap:5px}
+  .icon-svg{width:18px;height:18px}
+  .menu-title{font-size:13px}
+  .notice-card{padding:8px 12px}
+  .notice-item{align-items:flex-start;gap:9px}
+  .notice-item p{font-size:13px}
+}
 </style>
 </head>
+
 <body>
-<div class="topbar"><span>📍 ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</span><span>🎓 শিক্ষা • শৃঙ্খলা • নৈতিকতা</span></div>
-<header>
-<div class="nav">
-<a href="#home" class="brand"><div class="logo">MGS</div><div><h1>মছজিদ্দা গ্রামার স্কুল</h1><small>MASJIDDA GRAMMAR SCHOOL</small></div></a>
-<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">☰</button>
-<nav>
-<a href="#home" onclick="closeNav()">হোম</a><a href="#about" onclick="closeNav()">আমাদের সম্পর্কে</a><a href="#academic" onclick="closeNav()">একাডেমিক</a><a href="#admission" onclick="closeNav()">ভর্তি</a><a href="#notice" onclick="closeNav()">নোটিশ</a><a href="#contact" onclick="closeNav()">যোগাযোগ</a>
-</nav>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>📍 ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</span>
+    <span>শিক্ষা • শৃঙ্খলা • নৈতিকতা</span>
+  </div>
 </div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="navbar">
+    <a href="#home" class="brand">
+      <div class="logo-box">
+        <img src="assets/logo.png" alt="MGS Logo"
+             onerror="this.style.display='none'">
+        <span>MGS</span>
+      </div>
+      <div class="brand-name">
+        <h1>মছজিদ্দা গ্রামার স্কুল</h1>
+        <p>MASJIDDA GRAMMAR SCHOOL</p>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation">☰</button>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">হোম</a></li>
+        <li><a href="#about">আমাদের সম্পর্কে</a></li>
+        <li><a href="#academic">একাডেমিক</a></li>
+        <li><a href="#teachers">শিক্ষকবৃন্দ</a></li>
+        <li><a href="#notice">নোটিশ</a></li>
+        <li><a href="#gallery">গ্যালারি</a></li>
+        <li><a href="#contact">যোগাযোগ</a></li>
+        <li><a class="nav-admission" href="#admission">ভর্তি তথ্য</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
 <main>
-<div class="hero" id="home"><div class="hero-content">
-<div class="eyebrow">WELCOME TO MASJIDDA GRAMMAR SCHOOL</div>
-<h2>শিক্ষার আলোয় গড়ি<br><span>আগামীর সুন্দর ভবিষ্যৎ</span></h2>
-<p>জ্ঞান, নৈতিকতা, শৃঙ্খলা ও সৃজনশীলতার সমন্বয়ে প্রতিটি শিক্ষার্থীর সম্ভাবনা বিকাশে আমাদের অঙ্গীকার।</p>
-<div class="actions"><a class="btn" href="#admission">ভর্তি তথ্য জানুন →</a><a class="btn-outline" href="#about">আমাদের সম্পর্কে</a></div>
-</div></div>
+
+<!-- HERO BANNER -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="hero-tag">WELCOME TO MASJIDDA GRAMMAR SCHOOL</span>
+    <h2>শিক্ষার আলোয় গড়ি<br>
+      <span>আগামীর সুন্দর ভবিষ্যৎ</span>
+    </h2>
+    <p>
+      জ্ঞান, নৈতিকতা, শৃঙ্খলা ও সৃজনশীলতার সমন্বয়ে
+      প্রতিটি শিক্ষার্থীর সম্ভাবনা বিকাশে আমাদের অঙ্গীকার।
+    </p>
+    <div class="hero-actions">
+      <a href="https://surveyheart.com/form/691026973a10c48735db9574"
+         target="_blank" rel="noopener" class="btn btn-gold">
+         অনলাইন ভর্তি আবেদন →
+      </a>
+      <a href="#about" class="btn btn-outline">আমাদের সম্পর্কে</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK INFORMATION -->
 <div class="stats">
-<div class="stat"><strong>২০১৭</strong><span>প্রতিষ্ঠাকাল</span></div>
-<div class="stat"><strong>Play–7</strong><span>শ্রেণি কার্যক্রম</span></div>
-<div class="stat"><strong>MGS</strong><span>আমাদের পরিচয়</span></div>
+  <div class="stat">
+    <strong>২০১৭</strong>
+    <span>প্রতিষ্ঠাকাল</span>
+  </div>
+  <div class="stat">
+    <strong>Play–7</strong>
+    <span>শ্রেণি কার্যক্রম</span>
+  </div>
+  <div class="stat">
+    <strong>MGS</strong>
+    <span>আমাদের পরিচয়</span>
+  </div>
 </div>
-<section id="about"><div class="container">
-<div class="section-title"><small>ABOUT OUR SCHOOL</small><h2>আমাদের সম্পর্কে</h2><p>একটি সুন্দর শিক্ষা পরিবেশ, একটি উজ্জ্বল ভবিষ্যৎ</p></div>
-<div class="about-grid"><div class="about-text"><h3>মছজিদ্দা গ্রামার স্কুল</h3><p>মছজিদ্দা গ্রামার স্কুল একটি শিক্ষাপ্রতিষ্ঠান, যেখানে শিক্ষার্থীদের মানসম্মত শিক্ষা, নৈতিক মূল্যবোধ, শৃঙ্খলা ও সৃজনশীল বিকাশে গুরুত্ব দেওয়া হয়।</p><p>২০১৭ সালে যাত্রা শুরু করা প্রতিষ্ঠানটি Play থেকে সপ্তম শ্রেণি পর্যন্ত শিক্ষার্থীদের শিক্ষার সুযোগ দিয়ে আসছে।</p><p>আমাদের লক্ষ্য প্রতিটি শিক্ষার্থীকে জ্ঞান, দক্ষতা ও মানবিক গুণাবলিতে সমৃদ্ধ করে গড়ে তোলা।</p></div>
-<div class="about-card"><div class="big">MGS</div><h2>Learn • Grow • Shine</h2><p>শিক্ষা, সততা ও সাফল্যের পথে একসঙ্গে।</p></div></div>
-</div></section>
-<section class="academic" id="academic"><div class="container">
-<div class="section-title"><small>ACADEMIC PROGRAM</small><h2>আমাদের একাডেমিক কার্যক্রম</h2><p>শিশুর প্রাথমিক বিকাশ থেকে ধারাবাহিক শিক্ষার যাত্রা</p></div>
-<div class="classes">
-<div class="class-box">Play<span>প্রাক-প্রাথমিক</span></div><div class="class-box">Nursery<span>প্রাক-প্রাথমিক</span></div><div class="class-box">Class One<span>প্রথম শ্রেণি</span></div><div class="class-box">Class Two<span>দ্বিতীয় শ্রেণি</span></div><div class="class-box">Class Three<span>তৃতীয় শ্রেণি</span></div><div class="class-box">Class Four<span>চতুর্থ শ্রেণি</span></div><div class="class-box">Class Five<span>পঞ্চম শ্রেণি</span></div><div class="class-box">Class Six–Seven<span>ষষ্ঠ ও সপ্তম শ্রেণি</span></div>
-</div></div></section>
-<section><div class="container">
-<div class="section-title"><small>WHY CHOOSE US</small><h2>আমাদের বৈশিষ্ট্য</h2></div>
-<div class="features">
-<div class="feature"><div class="ico">📚</div><h3>মানসম্মত শিক্ষা</h3><p>পাঠ্যক্রমভিত্তিক পাঠদান ও নিয়মিত মূল্যায়ন।</p></div>
-<div class="feature"><div class="ico">👩‍🏫</div><h3>অভিজ্ঞ শিক্ষক</h3><p>শিক্ষার্থীদের যত্নসহকারে পাঠদানের প্রতি গুরুত্ব।</p></div>
-<div class="feature"><div class="ico">🌱</div><h3>নৈতিক শিক্ষা</h3><p>সততা, শৃঙ্খলা ও মানবিক মূল্যবোধের চর্চা।</p></div>
-<div class="feature"><div class="ico">📝</div><h3>নিয়মিত মূল্যায়ন</h3><p>শিক্ষার্থীদের অগ্রগতি পর্যবেক্ষণ ও উন্নয়নে সহযোগিতা।</p></div>
-<div class="feature"><div class="ico">🎨</div><h3>সৃজনশীল বিকাশ</h3><p>জ্ঞানচর্চা ও সৃজনশীল কর্মকাণ্ডে উৎসাহ।</p></div>
-<div class="feature"><div class="ico">🤝</div><h3>অভিভাবক যোগাযোগ</h3><p>শিক্ষার্থীর অগ্রগতিতে পরিবার ও বিদ্যালয়ের সহযোগিতা।</p></div>
-</div></div></section>
-<section class="admission" id="admission"><div class="container"><h2>আপনার সন্তানের শিক্ষার যাত্রা শুরু হোক MGS-এ</h2><p>ভর্তি, শ্রেণি, প্রয়োজনীয় কাগজপত্র ও অন্যান্য তথ্য জানতে বিদ্যালয়ের সঙ্গে যোগাযোগ করুন।</p><a class="btn" href="#contact">ভর্তি সংক্রান্ত যোগাযোগ</a></div></section>
-<section class="notice" id="notice"><div class="container"><div class="section-title"><small>NOTICE BOARD</small><h2>নোটিশ বোর্ড</h2><p>বিদ্যালয়ের গুরুত্বপূর্ণ ঘোষণা ও আপডেট</p></div>
-<div class="notice-card"><div class="notice-item"><div class="notice-date">NOTICE</div><div>নতুন নোটিশ প্রকাশিত হলে এখানে যুক্ত করা হবে।</div></div><div class="notice-item"><div class="notice-date">UPDATE</div><div>পরীক্ষার রুটিন ও ফলাফল সংক্রান্ত তথ্য এখানে প্রকাশ করা হবে।</div></div><div class="notice-item"><div class="notice-date">INFO</div><div>ভর্তি সংক্রান্ত তথ্যের জন্য বিদ্যালয় অফিসে যোগাযোগ করুন।</div></div></div>
-</div></section>
-<section id="gallery"><div class="container"><div class="section-title"><small>SCHOOL GALLERY</small><h2>আমাদের গ্যালারি</h2><p>বিদ্যালয়ের কার্যক্রম ও স্মরণীয় মুহূর্ত</p></div><div class="gallery-grid"><div class="gallery-box">🏫</div><div class="gallery-box">📖</div><div class="gallery-box">🎓</div><div class="gallery-box">🧑‍🎓</div><div class="gallery-box">🌳</div><div class="gallery-box">🏆</div></div><p style="text-align:center;color:#718096;margin-top:15px;font-size:13px">প্রকৃত বিদ্যালয়ের ছবি পরবর্তীতে এখানে যুক্ত করা যাবে।</p></div></section>
-<section class="contact" id="contact"><div class="container"><div class="section-title"><small>CONTACT US</small><h2>যোগাযোগ করুন</h2><p>আমাদের সঙ্গে যোগাযোগ করতে নিচের তথ্য ব্যবহার করুন</p></div>
-<div class="contact-grid"><div class="contact-box"><strong>📍 ঠিকানা</strong><p>ছোট কুমিরা, সীতাকুণ্ড,<br>চট্টগ্রাম, বাংলাদেশ</p></div><div class="contact-box"><strong>📞 ফোন</strong><p>বিদ্যালয়ের অফিসিয়াল নম্বর<br>এখানে যুক্ত করা হবে</p></div><div class="contact-box"><strong>✉️ ইমেইল</strong><p>বিদ্যালয়ের অফিসিয়াল ইমেইল<br>এখানে যুক্ত করা হবে</p></div></div>
-</div></section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-heading">
+      <small>ABOUT OUR SCHOOL</small>
+      <h2>আমাদের সম্পর্কে</h2>
+      <div class="gold-line"></div>
+      <p>একটি সুন্দর শিক্ষা পরিবেশ, একটি উজ্জ্বল ভবিষ্যৎ</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="assets/school.jpg" alt="মছজিদ্দা গ্রামার স্কুল"
+             onerror="this.style.display='none'">
+        <span>🏫</span>
+      </div>
+
+      <div class="about-text">
+        <h3>মছজিদ্দা গ্রামার স্কুল</h3>
+        <p>
+          মছজিদ্দা গ্রামার স্কুল একটি শিক্ষাপ্রতিষ্ঠান,
+          যেখানে শিক্ষার্থীদের মানসম্মত শিক্ষা, নৈতিক মূল্যবোধ,
+          শৃঙ্খলা ও সৃজনশীল বিকাশে গুরুত্ব দেওয়া হয়।
+        </p>
+        <p>
+          ২০১৭ সালে যাত্রা শুরু করা প্রতিষ্ঠানটি Play থেকে
+          সপ্তম শ্রেণি পর্যন্ত শিক্ষার্থীদের শিক্ষার সুযোগ দিয়ে আসছে।
+        </p>
+        <p>
+          আমাদের লক্ষ্য প্রতিটি শিক্ষার্থীকে জ্ঞান, দক্ষতা ও
+          মানবিক গুণাবলিতে সমৃদ্ধ করে গড়ে তোলা।
+        </p>
+        <div class="signature">
+          <strong>মোঃ জাহিদুল ইসলাম</strong>
+          <small>পরিচালক ও অধ্যক্ষ</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-heading">
+      <small>WHY CHOOSE US</small>
+      <h2>আমাদের বৈশিষ্ট্য</h2>
+      <div class="gold-line"></div>
+      <p>শিক্ষার্থীর সার্বিক বিকাশে আমাদের অঙ্গীকার</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>মানসম্মত শিক্ষা</h3>
+        <p>পাঠ্যক্রমভিত্তিক পাঠদান ও নিয়মিত মূল্যায়ন।</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👩‍🏫</div>
+        <h3>অভিজ্ঞ শিক্ষক</h3>
+        <p>শিক্ষার্থীদের যত্নসহকারে পাঠদানের প্রতি গুরুত্ব।</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌱</div>
+        <h3>নৈতিক শিক্ষা</h3>
+        <p>সততা, শৃঙ্খলা ও মানবিক মূল্যবোধের চর্চা।</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <h3>নিয়মিত মূল্যায়ন</h3>
+        <p>শিক্ষার্থীদের অগ্রগতি পর্যবেক্ষণ ও উন্নয়নে সহযোগিতা।</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>সৃজনশীল বিকাশ</h3>
+        <p>জ্ঞানচর্চা ও সৃজনশীল কর্মকাণ্ডে উৎসাহ।</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3>অভিভাবক যোগাযোগ</h3>
+        <p>শিক্ষার্থীর অগ্রগতিতে পরিবার ও বিদ্যালয়ের সহযোগিতা।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMIC -->
+<section id="academic">
+  <div class="container">
+    <div class="section-heading">
+      <small>ACADEMIC PROGRAM</small>
+      <h2>আমাদের একাডেমিক কার্যক্রম</h2>
+      <div class="gold-line"></div>
+      <p>শিশুর প্রাথমিক বিকাশ থেকে ধারাবাহিক শিক্ষার যাত্রা</p>
+    </div>
+
+    <div class="class-grid">
+      <div class="class-card"><strong>Play</strong><span>প্রাক-প্রাথমিক</span></div>
+      <div class="class-card"><strong>Nursery</strong><span>প্রাক-প্রাথমিক</span></div>
+      <div class="class-card"><strong>Class One</strong><span>প্রথম শ্রেণি</span></div>
+      <div class="class-card"><strong>Class Two</strong><span>দ্বিতীয় শ্রেণি</span></div>
+      <div class="class-card"><strong>Class Three</strong><span>তৃতীয় শ্রেণি</span></div>
+      <div class="class-card"><strong>Class Four</strong><span>চতুর্থ শ্রেণি</span></div>
+      <div class="class-card"><strong>Class Five</strong><span>পঞ্চম শ্রেণি</span></div>
+      <div class="class-card"><strong>Class Six–Seven</strong><span>ষষ্ঠ ও সপ্তম শ্রেণি</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSION -->
+<section class="admission-section" id="admission">
+  <div class="container">
+    <small style="color:#e5b653;letter-spacing:2px">ADMISSION INFORMATION</small>
+    <h2>আপনার সন্তানের শিক্ষার যাত্রা শুরু হোক MGS-এ</h2>
+    <p>
+      ভর্তি, শ্রেণি, প্রয়োজনীয় কাগজপত্র ও অন্যান্য তথ্য জানতে
+      বিদ্যালয়ের সঙ্গে যোগাযোগ করুন।
+    </p>
+    <a href="https://surveyheart.com/form/691026973a10c48735db9574"
+       target="_blank" rel="noopener" class="btn btn-gold">
+       অনলাইন ভর্তি আবেদন করুন
+    </a>
+  </div>
+</section>
+
+<!-- NOTICE -->
+<section class="notice-section" id="notice">
+  <div class="container">
+    <div class="section-heading">
+      <small>NOTICE BOARD</small>
+      <h2>নোটিশ বোর্ড</h2>
+      <div class="gold-line"></div>
+      <p>বিদ্যালয়ের গুরুত্বপূর্ণ ঘোষণা ও আপডেট</p>
+    </div>
+
+    <div class="notice-card">
+      <div class="notice-item">
+        <span class="notice-label">NOTICE</span>
+        <p>নতুন নোটিশ প্রকাশিত হলে এখানে যুক্ত করা হবে।</p>
+      </div>
+      <div class="notice-item">
+        <span class="notice-label">UPDATE</span>
+        <p>পরীক্ষার রুটিন ও ফলাফল সংক্রান্ত তথ্য এখানে প্রকাশ করা হবে।</p>
+      </div>
+      <div class="notice-item">
+        <span class="notice-label">INFO</span>
+        <p>ভর্তি সংক্রান্ত তথ্যের জন্য বিদ্যালয় অফিসে যোগাযোগ করুন।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section id="teachers">
+  <div class="container">
+    <div class="section-heading">
+      <small>OUR TEACHERS</small>
+      <h2>আমাদের শিক্ষকবৃন্দ</h2>
+      <div class="gold-line"></div>
+      <p>শিক্ষার্থীদের গড়ে তোলার নিবেদিতপ্রাণ মানুষ</p>
+    </div>
+
+    <div class="teacher-grid">
+      <div class="teacher-card">
+        <div class="teacher-avatar">👨‍🏫</div>
+        <h3>মোঃ জাহিদুল ইসলাম</h3>
+        <p>পরিচালক ও অধ্যক্ষ</p>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-avatar">👩‍🏫</div>
+        <h3>শিক্ষক পরিচিতি</h3>
+        <p>শিক্ষকের নাম ও পদবি যুক্ত হবে</p>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-avatar">👨‍🏫</div>
+        <h3>শিক্ষক পরিচিতি</h3>
+        <p>শিক্ষকের নাম ও পদবি যুক্ত হবে</p>
+      </div>
+    </div>
+    <p style="text-align:center;color:#718096;font-size:13px;margin-top:20px">
+      অন্যান্য শিক্ষকবৃন্দের তথ্য পরবর্তী সময়ে যুক্ত করা হবে।
+    </p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-heading">
+      <small>SCHOOL GALLERY</small>
+      <h2>আমাদের গ্যালারি</h2>
+      <div class="gold-line"></div>
+      <p>বিদ্যালয়ের কার্যক্রম ও স্মরণীয় মুহূর্ত</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/gallery1.jpg" alt="School activity"
+             onerror="this.style.display='none'">
+        <span>🏫</span>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/gallery2.jpg" alt="Students"
+             onerror="this.style.display='none'">
+        <span>📖</span>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/gallery3.jpg" alt="School event"
+             onerror="this.style.display='none'">
+        <span>🎓</span>
+      </div>
+    </div>
+    <p style="text-align:center;color:#718096;font-size:13px;margin-top:15px">
+      প্রকৃত বিদ্যালয়ের ছবি এখানে যুক্ত করা যাবে।
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <small>CONTACT US</small>
+      <h2>যোগাযোগ করুন</h2>
+      <div class="gold-line"></div>
+      <p>আমাদের সঙ্গে যোগাযোগ করতে নিচের তথ্য ব্যবহার করুন</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <h3>ঠিকানা</h3>
+        <p>ছোট কুমিরা, সীতাকুণ্ড,<br>চট্টগ্রাম, বাংলাদেশ</p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">📞</div>
+        <h3>ফোন</h3>
+        <p>বিদ্যালয়ের অফিসিয়াল নম্বর<br>পরবর্তীতে যুক্ত হবে</p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">✉️</div>
+        <h3>ইমেইল</h3>
+        <p>বিদ্যালয়ের অফিসিয়াল ইমেইল<br>পরবর্তীতে যুক্ত হবে</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer><div class="footer-grid"><div><h3>মছজিদ্দা গ্রামার স্কুল</h3><p>শিক্ষা, শৃঙ্খলা ও নৈতিকতার সমন্বয়ে আগামী প্রজন্মকে গড়ে তোলাই আমাদের প্রত্যয়।</p></div><div><h3>গুরুত্বপূর্ণ লিংক</h3><a href="#about">আমাদের সম্পর্কে</a><a href="#academic">একাডেমিক</a><a href="#admission">ভর্তি</a></div><div><h3>যোগাযোগ</h3><p>ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</p><a href="#contact">যোগাযোগের তথ্য</a></div></div><div class="copyright">© <span id="year"></span> Masjidda Grammar School. All Rights Reserved.</div></footer>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>মছজিদ্দা গ্রামার স্কুল</h3>
+        <p>
+          শিক্ষা, শৃঙ্খলা ও নৈতিকতার সমন্বয়ে
+          আগামী প্রজন্মকে গড়ে তোলাই আমাদের প্রত্যয়।
+        </p>
+      </div>
+      <div>
+        <h3>গুরুত্বপূর্ণ লিংক</h3>
+        <a href="#about">আমাদের সম্পর্কে</a>
+        <a href="#academic">একাডেমিক</a>
+        <a href="#admission">ভর্তি তথ্য</a>
+      </div>
+      <div>
+        <h3>যোগাযোগ</h3>
+        <p>ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</p>
+        <a href="#contact">যোগাযোগের তথ্য</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> Masjidda Grammar School.
+      All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- FIXED TWO E-SERVICE BUTTONS -->
+<div class="menu-wrapper">
+  <div class="menu-container">
+
+    <a href="https://surveyheart.com/form/691026973a10c48735db9574"
+       class="menu-card admission-btn-card"
+       target="_blank" rel="noopener"
+       aria-label="অনলাইন ভর্তি">
+
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+      </svg>
+      <span class="menu-title">অনলাইন ভর্তি</span>
+    </a>
+
+    <a href="https://docs.google.com/forms/d/1bpAXDasrsIIS2UPtDs3QVAcmCryzJxcx3DZK5uI84R0/preview"
+       class="menu-card message-btn-card"
+       target="_blank" rel="noopener"
+       aria-label="বার্তা প্রেরণ">
+
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+      </svg>
+      <span class="menu-title">বার্তা প্রেরণ</span>
+    </a>
+
+  </div>
+</div>
+
 <script>
-function closeNav(){document.querySelector('nav').classList.remove('open')}
-document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', function(){
+  navLinks.classList.toggle('open');
+  menuToggle.setAttribute(
+    'aria-expanded',
+    navLinks.classList.contains('open')
+  );
+});
+
+document.querySelectorAll('#navLinks a').forEach(function(link){
+  link.addEventListener('click', function(){
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+  });
+});
 </script>
+
 </body>
 </html>
