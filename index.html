@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="মছজিদ্দা গ্রামার স্কুল — মানসম্মত শিক্ষা, নৈতিকতা ও সৃজনশীলতার সমন্বয়ে আলোকিত ভবিষ্যৎ গড়ার প্রত্যয়।">
   <meta name="theme-color" content="#123b62">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <title>মছজিদ্দা গ্রামার স্কুল | MG School</title>
   <style>
     :root{
@@ -14,7 +17,7 @@
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;scroll-padding-top:100px}
-    body{font-family:"Noto Sans Bengali","Hind Siliguri","SolaimanLipi",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.75}
+    body{font-family:"Hind Siliguri","Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.75}
     a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
     .container{width:min(1160px,92%);margin:auto}
@@ -22,15 +25,16 @@
     .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .topbar a:hover{color:var(--gold)}
     header{background:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px rgba(0,0,0,.07)}
-    .head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0}
-    .brand img{width:64px;height:64px;object-fit:contain}
-    .brand-name{color:var(--navy);font-size:clamp(18px,2.2vw,25px);font-weight:800;line-height:1.35}
-    .brand-name small{display:block;color:var(--muted);font-size:11px;letter-spacing:1.5px;font-family:Arial,sans-serif}
+    .head{display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:10px 0 8px}
+    .brand{display:flex;align-items:center;justify-content:center;gap:14px;min-width:0;width:100%}
+    .brand img{width:58px;height:58px;object-fit:contain;flex:0 0 58px}
+    .brand-name{color:var(--navy);font-size:25px;font-weight:800;line-height:1.35;white-space:nowrap;text-align:left}
+    .brand-name small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.5px;font-family:Arial,sans-serif}
     .menu-btn{display:none;border:0;background:var(--navy);color:#fff;border-radius:9px;padding:9px 13px;font-size:21px;cursor:pointer}
-    nav ul{display:flex;align-items:center;gap:2px;list-style:none}
+    nav{width:100%;border-top:1px solid #edf1f5}
+    nav ul{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 3px;list-style:none}
     nav li{position:relative}
-    nav a,.nav-label{display:block;padding:10px 9px;font-size:13px;font-weight:700;color:#26394d;white-space:nowrap}
+    nav a,.nav-label{display:block;padding:7px 8px;font-size:13px;font-weight:700;color:#26394d;white-space:nowrap}
     nav a:hover,.nav-label:hover{color:var(--gold)}
     .dropdown{display:none;position:absolute;top:100%;left:0;min-width:225px;background:#fff;border-top:3px solid var(--gold);box-shadow:var(--shadow);border-radius:0 0 12px 12px;padding:8px;z-index:20}
     .dropdown a{white-space:normal;padding:8px 11px;border-radius:7px}
@@ -103,7 +107,11 @@
     }
     @media(max-width:760px){
       .topbar .container{justify-content:center;text-align:center}
-      .brand img{width:52px;height:52px}
+      .head{display:flex;flex-direction:row;align-items:center;justify-content:space-between}
+      .brand{justify-content:flex-start;width:auto}
+      .brand img{width:48px;height:48px;flex-basis:48px}
+      .brand-name{font-size:19px;white-space:normal}
+      nav{border-top:0}
       .hero{min-height:440px}
       .hero-content{padding:60px 0}
       .quick-grid{grid-template-columns:repeat(3,1fr)}
