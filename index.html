@@ -1,392 +1,182 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="মছজিদ্দা গ্রামার স্কুল — মানসম্মত শিক্ষা, নৈতিকতা ও সৃজনশীলতার সমন্বয়ে আলোকিত ভবিষ্যৎ গড়ার প্রত্যয়।">
-  <meta name="theme-color" content="#123b62">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <title>মছজিদ্দা গ্রামার স্কুল | MG School</title>
-  <style>
-    :root{
-      --navy:#123b62;--navy2:#0b2945;--gold:#d4a843;--green:#21865b;
-      --ink:#233244;--muted:#667789;--paper:#f4f7fa;--white:#fff;
-      --shadow:0 12px 32px rgba(18,59,98,.10);--radius:18px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;scroll-padding-top:100px}
-    body{font-family:"Hind Siliguri","Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.75}
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    .container{width:min(1160px,92%);margin:auto}
-    .topbar{background:var(--navy2);color:#eaf1f7;font-size:13px;padding:7px 0}
-    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .topbar a:hover{color:var(--gold)}
-    header{background:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px rgba(0,0,0,.07)}
-    .head{display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:10px 0 8px}
-    .brand{display:flex;align-items:center;justify-content:center;gap:14px;min-width:0;width:100%}
-    .brand img{width:58px;height:58px;object-fit:contain;flex:0 0 58px}
-    .brand-name{color:var(--navy);font-size:25px;font-weight:800;line-height:1.35;white-space:nowrap;text-align:left}
-    .brand-name small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.5px;font-family:Arial,sans-serif}
-    .menu-btn{display:none;border:0;background:var(--navy);color:#fff;border-radius:9px;padding:9px 13px;font-size:21px;cursor:pointer}
-    nav{width:100%;border-top:1px solid #edf1f5}
-    nav ul{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 3px;list-style:none}
-    nav li{position:relative}
-    nav a,.nav-label{display:block;padding:7px 8px;font-size:13px;font-weight:700;color:#26394d;white-space:nowrap}
-    nav a:hover,.nav-label:hover{color:var(--gold)}
-    .dropdown{display:none;position:absolute;top:100%;left:0;min-width:225px;background:#fff;border-top:3px solid var(--gold);box-shadow:var(--shadow);border-radius:0 0 12px 12px;padding:8px;z-index:20}
-    .dropdown a{white-space:normal;padding:8px 11px;border-radius:7px}
-    nav li:hover>.dropdown,nav li:focus-within>.dropdown{display:block}
-    .subdrop{position:relative}
-    .subdrop>.dropdown{left:100%;top:0}
-    .hero{background:linear-gradient(110deg,rgba(7,35,61,.94),rgba(18,59,98,.76)),url("assets/school-students.jpg") center/cover no-repeat;color:#fff;min-height:500px;display:flex;align-items:center}
-    .hero-content{max-width:720px;padding:75px 0}
-    .eyebrow{display:inline-block;background:rgba(212,168,67,.18);border:1px solid var(--gold);color:#ffe19a;padding:5px 14px;border-radius:30px;font-size:14px;margin-bottom:18px}
-    .hero h1{font-size:clamp(32px,5vw,55px);line-height:1.25;margin-bottom:18px}
-    .hero p{font-size:18px;color:#e6eef5;max-width:650px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .btn{display:inline-block;padding:11px 20px;border-radius:9px;font-weight:800;border:1px solid transparent;transition:.2s}
-    .btn-gold{background:var(--gold);color:#172b3d}.btn-outline{border-color:#fff;color:#fff}.btn:hover{transform:translateY(-2px)}
-    .class-note{margin-top:22px;color:#fff;font-weight:700}
-    .quick{margin-top:-34px;position:relative;z-index:2}
-    .quick-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-    .quick a{background:#fff;border-radius:14px;padding:17px 10px;text-align:center;box-shadow:var(--shadow);font-weight:800;color:var(--navy);font-size:14px}
-    .quick a span{display:block;font-size:25px;margin-bottom:5px}
-    section{padding:76px 0}
-    .section-head{text-align:center;margin-bottom:34px}
-    .section-head .tag{color:var(--green);font-weight:800;font-size:13px}
-    .section-head h2{font-size:clamp(25px,3vw,35px);color:var(--navy);line-height:1.35;margin:6px 0 9px}
-    .section-head p{color:var(--muted);max-width:720px;margin:auto}
-    .soft{background:var(--paper)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .card{background:#fff;padding:24px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #edf1f5}
-    .card h3{color:var(--navy);font-size:19px;margin-bottom:9px}
-    .card p{color:var(--muted)}
-    .icon{width:48px;height:48px;border-radius:13px;background:#edf4fa;color:var(--navy);display:grid;place-items:center;font-size:24px;margin-bottom:15px}
-    .notice-list{display:grid;gap:12px}
-    .notice{display:flex;justify-content:space-between;align-items:center;gap:15px;background:#fff;padding:15px 18px;border-radius:12px;border-left:4px solid var(--gold);box-shadow:0 5px 18px rgba(0,0,0,.04)}
-    .notice strong{color:var(--navy)}
-    .notice small{color:var(--muted)}
-    .split{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-    .photo-placeholder{min-height:310px;border-radius:22px;background:linear-gradient(135deg,#dce8f1,#f6e9c9);display:grid;place-items:center;color:var(--navy);font-size:18px;font-weight:800;text-align:center;padding:25px}
-    .feature-list{list-style:none;display:grid;gap:10px;margin-top:18px}
-    .feature-list li:before{content:"✓";color:var(--green);font-weight:900;margin-right:10px}
-    .quote{background:var(--navy);color:#fff;border-radius:20px;padding:28px;height:100%}
-    .quote h3{color:#ffdf91;margin-bottom:10px}
-    .quote p{color:#e6eef5}
-    .quote .person{margin-top:20px;font-weight:800;color:#fff}
-    .certificate{display:flex;gap:15px;align-items:center}
-    .certificate .icon{flex:none}
-    .certificate a{color:var(--green);font-weight:800;text-decoration:underline}
-    .service-card{border-top:4px solid var(--gold)}
-    .pill{display:inline-block;background:#edf5f0;color:var(--green);border-radius:30px;padding:4px 10px;font-size:12px;font-weight:800;margin-top:12px}
-    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .gallery-box{height:160px;border-radius:14px;background:linear-gradient(135deg,#d8e4ee,#f5e9cc);display:grid;place-items:center;color:var(--navy);font-weight:700;text-align:center;padding:12px}
-    .contact-card a{color:var(--green);font-weight:700;overflow-wrap:anywhere}
-    .map-frame{width:100%;height:300px;border:0;border-radius:16px}
-    footer{background:var(--navy2);color:#fff;padding:28px 0;text-align:center}
-    footer .school{font-size:21px;font-weight:800}
-    footer .copyright{font-size:13px;color:#dce5ed;margin-top:5px}
-    footer .tech{color:#f0ca70;margin-top:8px;font-weight:700}
-    .fixed-services{position:fixed;right:16px;bottom:18px;z-index:900;display:flex;flex-direction:column;gap:9px}
-    .fixed-services a{background:var(--green);color:#fff;padding:10px 14px;border-radius:30px;box-shadow:0 7px 20px #0002;font-size:13px;font-weight:800}
-    .fixed-services a:last-child{background:var(--gold);color:#172b3d}
-    @media(max-width:1050px){
-      .menu-btn{display:block}
-      nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;max-height:75vh;overflow:auto;box-shadow:var(--shadow);padding:8px 4% 18px}
-      nav.open{display:block}
-      nav ul{display:block}
-      nav a,.nav-label{white-space:normal;padding:10px 12px;border-bottom:1px solid #edf1f5}
-      .dropdown,.subdrop>.dropdown{display:none;position:static;box-shadow:none;border:0;padding:0 0 0 15px;min-width:0}
-      li.expanded>.dropdown{display:block}
-      .dropdown a{font-weight:600}
-      .nav-label{cursor:pointer}
-    }
-    @media(max-width:760px){
-      .topbar .container{justify-content:center;text-align:center}
-      .head{display:flex;flex-direction:row;align-items:center;justify-content:space-between}
-      .brand{justify-content:flex-start;width:auto}
-      .brand img{width:48px;height:48px;flex-basis:48px}
-      .brand-name{font-size:19px;white-space:normal}
-      nav{border-top:0}
-      .hero{min-height:440px}
-      .hero-content{padding:60px 0}
-      .quick-grid{grid-template-columns:repeat(3,1fr)}
-      section{padding:58px 0}
-      .grid-3,.grid-2,.split{grid-template-columns:1fr}
-      .gallery-grid{grid-template-columns:repeat(2,1fr)}
-      .notice{align-items:flex-start;flex-direction:column}
-      .fixed-services{right:9px;bottom:10px}
-      .fixed-services a{font-size:11px;padding:8px 11px}
-    }
-    @media(max-width:390px){.brand-name{font-size:16px}.quick a{font-size:12px}.quick a span{font-size:21px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123d32">
+<meta name="description" content="মছজিদ্দা গ্রামার স্কুল, ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম। ডিজিটাল শিক্ষা, শিক্ষার্থী-কেন্দ্রিক পাঠদান ও নিরাপদ শিক্ষার পরিবেশ।">
+<title>মছজিদ্দা গ্রামার স্কুল | Masjidda Grammar School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#087b43;--gd:#123d32;--navy:#173a58;--gold:#e6a329;--ink:#1c2b28;--muted:#66756e;--paper:#f5f8f6;--line:#e3eae5;--white:#fff;--shadow:0 15px 40px rgba(18,61,50,.09);--max:1190px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;color:var(--ink);font-family:"Hind Siliguri",sans-serif;line-height:1.65;background:#fff}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.topline{background:var(--gd);color:#eaf3ed;font-size:12px}.topline .container{min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:15px}.topline a:hover{color:#fff}
+header{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;min-width:245px}.brand img{width:57px;height:57px;object-fit:contain;border-radius:50%;background:#f1f6f2}.brand b{display:block;color:var(--gd);font-size:19px;line-height:1.2}.brand small{display:block;color:#6c7b73;font:800 9px Manrope,sans-serif;letter-spacing:.09em}.navlinks{display:flex;align-items:center;justify-content:center;flex:1;flex-wrap:wrap;column-gap:15px;row-gap:2px}.navlinks>a,.navparent{font-size:12px;font-weight:700;color:#34483f;white-space:nowrap}.navlinks>a{padding:8px 0}.navlinks a:hover,.navparent:hover{color:var(--g)}.navgroup{position:relative}.navparent{font-family:inherit;border:0;background:transparent;padding:8px 0;cursor:pointer}.navparent span{font-size:13px;color:var(--g);margin-left:2px}.submenu{display:none;position:absolute;top:100%;right:0;min-width:220px;max-width:270px;padding:7px;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 14px 32px #102f281c;z-index:120}.navgroup.open>.submenu{display:grid}.submenu a{display:block;padding:8px 10px;border-radius:6px;font-size:12px;font-weight:600;color:#34483f;white-space:normal}.submenu a:hover{background:#eff6f1;color:var(--g)}.navcta{display:flex;gap:9px;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:7px;font-weight:700;font-size:13px;border:1px solid transparent;transition:.2s;cursor:pointer}.primary{background:var(--g);color:white}.primary:hover{background:var(--gd);transform:translateY(-2px)}.outline{border-color:#cbd9d0;color:var(--gd);background:white}.outline:hover{background:#eff6f1}.gold{background:var(--gold);color:#203126}.menu{display:none;border:1px solid var(--line);background:#fff;border-radius:7px;width:43px;height:43px;font-size:22px;color:var(--gd)}
+.hero{background:linear-gradient(120deg,#f3f8f4,#fff 65%);padding:42px 0 52px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:48px}.kicker{display:inline-flex;align-items:center;gap:9px;color:var(--g);font:800 10px Manrope,sans-serif;letter-spacing:.13em;text-transform:uppercase}.kicker:before{content:"";width:25px;height:2px;background:var(--gold)}h1{font-size:clamp(38px,5vw,62px);line-height:1.12;color:var(--gd);margin:15px 0 18px;letter-spacing:-.025em}h1 span{color:var(--g)}.hero p{font-size:17px;color:var(--muted);max-width:510px;margin:0 0 25px}.hero-actions{display:flex;flex-wrap:wrap;gap:11px}.hero-meta{margin-top:23px;color:#68776f;font-size:12px}.hero-meta b{color:var(--gd)}.visual{height:455px;position:relative}.visual-main{position:absolute;inset:0 48px 45px 0;width:calc(100% - 48px);height:calc(100% - 45px);object-fit:cover;border-radius:14px;box-shadow:var(--shadow);background:#d9e8df}.visual-campus{position:absolute;right:0;bottom:0;width:43%;height:38%;object-fit:cover;border:7px solid #f5f8f6;border-radius:13px;box-shadow:var(--shadow);background:#cadbd0}.visual-tag{position:absolute;left:-17px;bottom:68px;background:var(--gd);color:white;padding:13px 17px;border-radius:8px;box-shadow:var(--shadow)}.visual-tag b{display:block;font-size:14px}.visual-tag span{font-size:11px;color:#d4e3da}
+.stats{margin-top:-1px;position:relative}.statgrid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}.stat{padding:19px 16px;text-align:center;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font:800 26px Manrope,sans-serif;color:var(--g)}.stat span{font-size:12px;color:var(--muted)}
+.section{padding:82px 0}.soft{background:var(--paper)}.heading{text-align:center;max-width:720px;margin:0 auto 34px}.heading .kicker{justify-content:center}.heading h2{font-size:clamp(27px,3.5vw,40px);color:var(--gd);line-height:1.2;margin:12px 0}.heading p{margin:0;color:var(--muted);font-size:15px}.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:55px;align-items:center}.about-img{height:390px;width:100%;object-fit:cover;border-radius:13px;background:#dce9e1;box-shadow:var(--shadow)}.about h2{font-size:clamp(28px,3.5vw,40px);line-height:1.22;color:var(--gd);margin:12px 0}.about p{color:var(--muted);margin:0 0 13px}.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}.checks span{font-size:13px;font-weight:600;color:var(--gd)}.checks span:before{content:"✓";color:var(--g);font-weight:800;margin-right:8px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.card img{width:100%;height:175px;object-fit:cover;background:#e5eee8}.cardbody{padding:18px}.cardbody h3{margin:0 0 7px;color:var(--gd);font-size:18px}.cardbody p{margin:0 0 13px;color:var(--muted);font-size:13px}.tag{font:800 9px Manrope,sans-serif;letter-spacing:.1em;color:#b27c1b;text-transform:uppercase}
+.profile-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.profile{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:white}.profile img{width:100%;height:205px;object-fit:cover;background:#e5eee8}.profile div{padding:15px}.profile h3{font-size:16px;color:var(--gd);margin:0 0 4px}.profile p{font-size:12px;color:var(--muted);margin:0}
+.feature-band{background:var(--gd);color:white}.feature-layout{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:center}.feature-layout h2{font-size:clamp(27px,3vw,38px);line-height:1.2;margin:12px 0}.feature-layout>div:first-child p{color:#c7d8ce}.feature-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.feature{border:1px solid #ffffff2a;background:#ffffff0b;padding:18px;border-radius:10px}.feature b{display:block;margin:7px 0 3px}.feature p{font-size:11px;color:#c8d9d0;margin:0}.feature .ico{font-size:23px;color:#efbd5b}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:23px}.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}.panel h3{color:var(--gd);margin:0 0 14px;font-size:21px}.listrow{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.listrow:last-child{border:0}.date{background:#edf5ef;color:var(--g);border-radius:7px;text-align:center;padding:7px 3px;font-size:10px}.date b{display:block;font:800 18px Manrope}.listrow strong{display:block;font-size:13px;color:var(--ink)}.listrow small{color:var(--muted);font-size:11px}
+.actiongrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.action{border:1px solid var(--line);border-radius:11px;padding:18px;background:white;display:flex;gap:13px;align-items:flex-start}.action .symbol{width:38px;height:38px;border-radius:9px;background:#edf5ef;color:var(--g);display:grid;place-items:center;flex:0 0 auto;font-size:18px}.action b{display:block;color:var(--gd);font-size:14px}.action span{display:block;color:var(--muted);font-size:11px}
+.gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:175px 175px;gap:12px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:10px;background:#dce9e1}.gallery img:first-child{grid-row:span 2}
+.cta{background:linear-gradient(110deg,#123d32,#1c5b43);color:white;padding:55px 0}.cta .inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{font-size:clamp(25px,3vw,36px);margin:0 0 6px}.cta p{margin:0;color:#d0dfd6}
+.contact{display:grid;grid-template-columns:1.05fr .95fr;gap:25px}.contact-list{display:grid;gap:12px}.contactitem{display:flex;gap:13px;padding:15px;border:1px solid var(--line);border-radius:10px}.contactitem .symbol{width:38px;height:38px;display:grid;place-items:center;background:#edf5ef;color:var(--g);border-radius:50%;flex:0 0 auto}.contactitem b{display:block;color:var(--gd);font-size:13px}.contactitem span{display:block;color:var(--muted);font-size:12px}.map{min-height:275px;border-radius:12px;background:#eaf2ed;display:grid;place-items:center;text-align:center;padding:22px;color:var(--gd)}.map p{color:var(--muted);font-size:13px}
+footer{background:#102f28;color:#d5e2da;padding:50px 0 20px}.footgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;padding-bottom:30px}.footbrand{display:flex;align-items:center;gap:10px;margin-bottom:12px}.footbrand img{width:45px;height:45px;object-fit:contain;background:#fff;border-radius:50%}.footbrand b{color:#fff;line-height:1.2}.footgrid p{font-size:12px;color:#aebfb5}.footgrid h4{color:#fff;margin:0 0 12px}.footlinks{display:grid;gap:8px;font-size:12px}.footlinks a:hover{color:#fff}.copyright{border-top:1px solid #ffffff22;padding-top:16px;display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#9fb2a7}
+.fixed{position:fixed;right:17px;bottom:17px;z-index:110;display:flex;flex-direction:column;gap:8px}.fixed a{border-radius:30px;padding:10px 15px;font-size:12px;font-weight:700;box-shadow:0 7px 22px #0002}.fixed .f-adm{background:#f0b43e;color:#26342b}.fixed .f-msg{background:#087b43;color:white}
+@media(max-width:1150px){.navlinks{column-gap:10px}.navlinks>a,.navparent{font-size:11px}.brand{min-width:205px}.brand b{font-size:16px}}
+@media(max-width:1050px){.menu{display:block}.nav{min-height:74px}.navlinks{display:none;position:absolute;top:74px;left:0;right:0;max-height:calc(100vh - 82px);overflow-y:auto;background:white;padding:10px 20px 22px;border-bottom:1px solid var(--line);box-shadow:0 12px 20px #0001;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0}.navlinks.open{display:flex}.navlinks>a,.navparent{display:flex;width:100%;align-items:center;justify-content:space-between;padding:11px 3px;border-bottom:1px solid #eef2ef;font-size:14px;text-align:left}.navgroup{width:100%}.submenu{position:static;min-width:0;max-width:none;padding:4px 0 7px 12px;border:0;border-radius:0;box-shadow:none;background:#f8fbf9}.submenu a{padding:8px 12px;font-size:13px;border-bottom:1px solid #edf2ee}.navcta .btn{display:none}.hero-grid,.about,.feature-layout,.dual,.contact{grid-template-columns:1fr}.visual{height:390px}.statgrid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.profile-grid{grid-template-columns:repeat(2,1fr)}.footgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.container{width:calc(100% - 30px)}.topline .container{justify-content:center;font-size:10px}.topline .container span:last-child{display:none}.brand{min-width:0;gap:8px}.brand img{width:46px;height:46px}.brand b{font-size:14px}.brand small{font-size:7px}.hero{padding:25px 0 40px}.hero h1{font-size:39px}.hero p{font-size:15px}.visual{height:290px}.visual-main{inset:0 30px 30px 0;width:calc(100% - 30px);height:calc(100% - 30px)}.visual-campus{border-width:5px}.visual-tag{left:-4px;bottom:43px;padding:9px 12px}.section{padding:60px 0}.cards,.actiongrid{grid-template-columns:1fr}.card img{height:190px}.profile-grid{grid-template-columns:1fr 1fr;gap:10px}.profile img{height:145px}.profile div{padding:11px}.feature-cards{grid-template-columns:1fr}.checks{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:140px 115px}.gallery img:first-child{grid-column:span 2;grid-row:auto}.cta .inner{align-items:flex-start;flex-direction:column}.footgrid{grid-template-columns:1fr 1fr;gap:23px 15px}.copyright{flex-direction:column}.fixed{right:9px;bottom:9px}.fixed a{font-size:10px;padding:9px 11px}}
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="container">
-      <span>📍 মছজিদ্দা, ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</span>
-      <span>☎ <a href="tel:09649978797">09649-978797</a> &nbsp; | &nbsp; ✉ <a href="mailto:official.mgschool@gmail.com">official.mgschool@gmail.com</a></span>
-    </div>
-  </div>
+<div class="topline"><div class="container"><span>📍 ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</span><span>উপজেলায় শিক্ষায় ডিজিটাল বিবর্তন — শিক্ষার্থী, শিক্ষক ও স্কুল ব্যবস্থাপনায় আমাদের অগ্রযাত্রা</span><a href="#notice">নোটিশ বোর্ড ↗</a></div></div>
+<header><div class="container nav">
+<a class="brand" href="#home"><img src="assets/logo.png" alt="স্কুলের লোগো" onerror="this.style.display='none'"><span><b>মছজিদ্দা গ্রামার স্কুল</b><small>MASJIDDA GRAMMAR SCHOOL</small></span></a>
+<nav class="navlinks" id="navlinks" aria-label="প্রধান নেভিগেশন">
+<a class="nav-home" href="#home">হোম</a>
+<div class="navgroup"><button class="navparent" type="button" aria-expanded="false">আমাদের সম্পর্কে <span>⌄</span></button><div class="submenu">
+<a href="#about">স্কুল পরিচিতি</a><a href="#profiles">স্কুলের ইতিহাস ও নেতৃত্ব</a><a href="#profiles">লক্ষ্য, উদ্দেশ্য ও শিক্ষাদর্শন</a><a href="#profiles">সভাপতি ও পরিচালকের বাণী</a><a href="#profiles">শিক্ষক প্যানেল ও কর্মচারী</a><a href="#profiles">অনুমোদন ও নিবন্ধন</a>
+</div></div>
+<div class="navgroup"><button class="navparent" type="button" aria-expanded="false">একাডেমিক <span>⌄</span></button><div class="submenu">
+<a href="#academics">শ্রেণি পরিচিতি ও পাঠ্যক্রম</a><a href="#academics">সিলেবাস</a><a href="#academics">একাডেমিক ক্যালেন্ডার</a><a href="#academics">ক্লাস রুটিন</a><a href="#academics">পরীক্ষার রুটিন ও ফলাফল</a><a href="#academics">শিক্ষাসামগ্রী ও অনুশীলনী</a><a href="#academics">শিক্ষণ অগ্রগতি মূল্যায়ন</a>
+</div></div>
+<div class="navgroup"><button class="navparent" type="button" aria-expanded="false">ভর্তি <span>⌄</span></button><div class="submenu">
+<a href="#admission">ভর্তি বিজ্ঞপ্তি ও যোগ্যতা</a><a href="#admission">ভর্তি প্রক্রিয়া ও নীতিমালা</a><a href="#admission">ফি কাঠামো</a><a href="#admission">অনলাইন আবেদন</a><a href="#admission">ভর্তি ফরম ও প্রয়োজনীয় কাগজপত্র</a>
+</div></div>
+<div class="navgroup"><button class="navparent" type="button" aria-expanded="false">শিক্ষার্থী ও অভিভাবক <span>⌄</span></button><div class="submenu">
+<a href="#downloads">শিক্ষার্থী তথ্য ও নির্দেশনা</a><a href="#downloads">উপস্থিতি ও ডিজিটাল হাজিরা</a><a href="#downloads">স্কুল অ্যাপ</a><a href="#downloads">অভিভাবক নির্দেশিকা ও নোটিশ</a><a href="#downloads">অভিভাবক সহায়তা</a><a href="#downloads">নিজস্ব হ্যান্ডনোট</a>
+</div></div>
+<div class="navgroup"><button class="navparent" type="button" aria-expanded="false">নোটিশ ও ডাউনলোড <span>⌄</span></button><div class="submenu">
+<a href="#notice">সাধারণ ও একাডেমিক নোটিশ</a><a href="#notice">পরীক্ষা ও ছুটির বিজ্ঞপ্তি</a><a href="#notice">ভর্তি ও ফলাফল বিজ্ঞপ্তি</a><a href="#downloads">পরীক্ষার রুটিন ও সিলেবাস</a><a href="#downloads">ভর্তি ফরম ও প্রয়োজনীয় ডকুমেন্ট</a><a href="#downloads">শিক্ষাসামগ্রী ও হ্যান্ডনোট</a>
+</div></div>
+<div class="navgroup"><button class="navparent" type="button" aria-expanded="false">গ্যালারি ও কার্যক্রম <span>⌄</span></button><div class="submenu">
+<a href="#gallery">ফটো গ্যালারি</a><a href="#gallery">ভিডিও গ্যালারি</a><a href="#activities">ক্রীড়া ও সাংস্কৃতিক অনুষ্ঠান</a><a href="#activities">পুরস্কার বিতরণী ও শিক্ষা সফর</a><a href="#activities">জাতীয় দিবস ও বিশেষ আয়োজন</a><a href="#activities">শিক্ষার্থীদের সাফল্য ও অর্জন</a>
+</div></div>
+<div class="navgroup"><button class="navparent" type="button" aria-expanded="false">বিশেষ শিক্ষা <span>⌄</span></button><div class="submenu">
+<a href="#activities">স্পোকেন ইংলিশ</a><a href="#activities">স্বশিক্ষা ও সৃজনশীল শিক্ষা</a><a href="#activities">ধর্মীয় ও নৈতিক শিক্ষা</a><a href="#activities">দোয়া ও সূরা শিক্ষা</a><a href="#activities">মন্ত্র ও শ্লোক শিক্ষা</a><a href="#activities">বিশেষ প্রস্তুতি ও দক্ষতা উন্নয়ন</a>
+</div></div>
+<a href="#contact">যোগাযোগ</a>
+</nav>
+<div class="navcta"><a class="btn primary" href="#admission">অনলাইন ভর্তি ↗</a><button class="menu" id="menu" aria-label="মেনু" aria-expanded="false">☰</button></div>
+</div></header>
 
-  <header>
-    <div class="container head">
-      <a class="brand" href="#home" aria-label="হোম">
-        <img src="assets/logo.png" alt="মছজিদ্দা গ্রামার স্কুলের লোগো" onerror="this.style.display='none'">
-        <div class="brand-name">মছজিদ্দা গ্রামার স্কুল<small>MASJIDDA GRAMMAR SCHOOL</small></div>
-      </a>
-      <button class="menu-btn" id="menuBtn" aria-label="মেনু খুলুন" aria-expanded="false">☰</button>
-      <nav id="mainNav" aria-label="প্রধান মেনু">
-        <ul>
-          <li><a href="#home">হোম</a></li>
-          <li class="has-drop"><a href="#about">আমাদের সম্পর্কে ▾</a><ul class="dropdown">
-            <li><a href="#about">স্কুল পরিচিতি</a></li><li><a href="#history">ইতিহাস</a></li><li><a href="#aims">লক্ষ্য ও উদ্দেশ্য</a></li><li><a href="#chairman">সভাপতির বাণী</a></li><li><a href="#director">পরিচালকের বাণী</a></li>
-          </ul></li>
-          <li class="has-drop"><a href="#academic">একাডেমিক ▾</a><ul class="dropdown">
-            <li><a href="#academic">শ্রেণি পরিচিতি</a></li><li><a href="#academic">পাঠ্যক্রম</a></li><li><a href="#calendar">একাডেমিক ক্যালেন্ডার</a></li><li><a href="#routine">ক্লাস রুটিন</a></li>
-          </ul></li>
-          <li class="has-drop"><a href="#admission">ভর্তি ▾</a><ul class="dropdown">
-            <li><a href="#admission">ভর্তি বিজ্ঞপ্তি</a></li><li><a href="#admission">ভর্তি প্রক্রিয়া</a></li><li><a href="#admission">ফি কাঠামো</a></li><li><a href="#contact">অনলাইন আবেদন/যোগাযোগ</a></li>
-          </ul></li>
-          <li class="has-drop"><a href="#teachers">শিক্ষক ও কর্মচারী ▾</a><ul class="dropdown"><li><a href="#teachers">শিক্ষক প্যানেল</a></li><li><a href="#teachers">কর্মচারী পরিচিতি</a></li></ul></li>
-          <li class="has-drop"><a href="#students">শিক্ষার্থী কর্নার ▾</a><ul class="dropdown"><li><a href="#students">সিলেবাস</a></li><li><a href="#students">শিক্ষাসামগ্রী</a></li><li><a href="#routine">পরীক্ষার রুটিন</a></li><li><a href="#results">ফলাফল</a></li></ul></li>
-          <li class="has-drop"><a href="#notices">নোটিশ বোর্ড ▾</a><ul class="dropdown"><li><a href="#notices">সাধারণ নোটিশ</a></li><li><a href="#notices">একাডেমিক নোটিশ</a></li><li><a href="#notices">পরীক্ষার নোটিশ</a></li></ul></li>
-          <li class="has-drop"><a href="#certificates">অনুমোদন ও নিবন্ধন ▾</a><ul class="dropdown"><li><a href="#certificates">পাঠদান অনুমতি</a></li><li><a href="#certificates">নিবন্ধন সনদ</a></li><li><a href="#certificates">নিবন্ধন তথ্য</a></li></ul></li>
-          <li class="has-drop"><a href="#activities">সহশিক্ষা কার্যক্রম ▾</a><ul class="dropdown"><li><a href="#activities">খেলাধুলা</a></li><li><a href="#activities">সাংস্কৃতিক অনুষ্ঠান</a></li><li><a href="#activities">বার্ষিক অনুষ্ঠান</a></li></ul></li>
-          <li class="has-drop"><a href="#gallery">গ্যালারি ▾</a><ul class="dropdown"><li><a href="#gallery">ছবি</a></li><li><a href="#gallery">ভিডিও</a></li></ul></li>
-          <li class="has-drop"><a href="#parents">অভিভাবক কর্নার ▾</a><ul class="dropdown"><li><a href="#parents">উপস্থিতি</a></li><li><a href="#results">ফলাফল</a></li><li><a href="#notices">নোটিশ</a></li><li><a href="#parents">নির্দেশনা</a></li></ul></li>
-          <li class="has-drop"><a href="#downloads">ডাউনলোড ▾</a><ul class="dropdown"><li><a href="#downloads">ভর্তি ফরম</a></li><li><a href="#downloads">সিলেবাস</a></li><li><a href="#downloads">রুটিন</a></li><li><a href="#downloads">প্রয়োজনীয় ফরম</a></li></ul></li>
-          <li class="has-drop"><a href="#digital">ডিজিটাল সেবা ▾</a><ul class="dropdown"><li><a href="#digital">নিজস্ব স্কুল অ্যাপ</a></li><li><a href="#digital">ডিজিটাল হাজিরা</a></li><li><a href="#digital">সিসিটিভি নিরাপত্তা</a></li><li><a href="#special">নিজস্ব হ্যান্ডনোট</a></li><li><a href="#special">শিখন অগ্রগতি মূল্যায়ন</a></li></ul></li>
-          <li class="has-drop"><a href="#special">বিশেষ শিক্ষা ▾</a><ul class="dropdown"><li><a href="#special">স্পোকেন ইংলিশ</a></li><li><a href="#special">স্বশিক্ষা ও সৃজনশীল শিক্ষা</a></li><li><a href="#special">ধর্মীয় ও নৈতিক শিক্ষা</a></li><li><a href="#special">দোয়া, সূরা, মন্ত্র ও শ্লোক শিক্ষা</a></li></ul></li>
-          <li><a href="#contact">যোগাযোগ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div><span class="kicker">Welcome to Masjidda Grammar School</span><h1>শিক্ষার আলোয়<br><span>উজ্জ্বল ভবিষ্যৎ</span></h1>
+<p>শিক্ষার্থী, শিক্ষক ও অভিভাবকের সমন্বয়ে একটি আধুনিক, নিরাপদ ও প্রযুক্তিনির্ভর শিক্ষার পরিবেশ গড়ে তোলাই আমাদের অঙ্গীকার।</p>
+<div class="hero-actions"><a class="btn primary" href="#admission">ভর্তি তথ্য জানুন ↗</a><a class="btn outline" href="#about">আমাদের সম্পর্কে</a></div>
+<div class="hero-meta"><b>MASJIDDA GRAMMAR SCHOOL</b> · Choto Kumira, Sitakunda, Chattogram</div></div>
+<div class="visual"><img class="visual-main" src="assets/students.jpg" alt="শ্রেণিকক্ষে মছজিদ্দা গ্রামার স্কুলের শিক্ষার্থীরা"><img class="visual-campus" src="assets/campus.jpg" alt="স্কুল ক্যাম্পাস"><div class="visual-tag"><b>Learn • Lead • Shine</b><span>শেখা, বিকাশ ও সাফল্যের পথে</span></div></div>
+</div></section>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container"><div class="hero-content">
-        <span class="eyebrow">শিক্ষার আলোয় আলোকিত ভবিষ্যৎ</span>
-        <h1>স্বাগতম<br>মছজিদ্দা গ্রামার স্কুলে</h1>
-        <p>মানসম্মত শিক্ষা, নৈতিক মূল্যবোধ ও সৃজনশীল চর্চার সমন্বয়ে প্রতিটি শিক্ষার্থীর সম্ভাবনাকে বিকশিত করার আমাদের অঙ্গীকার।</p>
-        <div class="hero-actions"><a class="btn btn-gold" href="#admission">ভর্তি সংক্রান্ত তথ্য</a><a class="btn btn-outline" href="#contact">যোগাযোগ করুন</a></div>
-        <div class="class-note">শ্রেণি: প্লে থেকে অষ্টম শ্রেণি (পর্যায়ক্রমে দশম)</div>
-      </div></div>
-    </section>
+<div class="container stats"><div class="statgrid">
+<div class="stat"><strong>৩৫০+</strong><span>শিক্ষার্থী</span></div><div class="stat"><strong>১৫+</strong><span>শিক্ষক-শিক্ষিকা</span></div><div class="stat"><strong>২০১৭</strong><span>প্রতিষ্ঠাকাল</span></div><div class="stat"><strong>Digital</strong><span>আধুনিক স্কুল ব্যবস্থাপনা</span></div>
+</div></div>
 
-    <div class="container quick"><div class="quick-grid">
-      <a href="#notices"><span>📢</span>নোটিশ</a><a href="#admission"><span>📝</span>ভর্তি তথ্য</a><a href="#academic"><span>📚</span>একাডেমিক</a><a href="#results"><span>🏆</span>ফলাফল</a><a href="#routine"><span>🗓️</span>রুটিন</a><a href="#downloads"><span>⬇️</span>ডাউনলোড</a>
-    </div></div>
+<section class="section" id="about"><div class="container about">
+<img class="about-img" src="assets/school-building.jpg" alt="মছজিদ্দা গ্রামার স্কুলের ভবন বা প্রাঙ্গণ">
+<div><span class="kicker">About our institution</span><h2>আমাদের কথা</h2>
+<p>মছজিদ্দা গ্রামার স্কুল ২০১৭ সালে সীতাকুণ্ড উপজেলার ৭ নং কুমিরা ইউনিয়নে আধুনিক, নিরাপদ ও প্রযুক্তিনির্ভর শিক্ষার এক নতুন দিগন্ত উন্মোচনের লক্ষ্য নিয়ে যাত্রা শুরু করে।</p>
+<p>আমরা শিক্ষার্থীদের পাঠ্যজ্ঞান অর্জনের পাশাপাশি নৈতিকতা, শৃঙ্খলা, সৃজনশীলতা, আত্মবিশ্বাস ও মানবিক মূল্যবোধ বিকাশে গুরুত্ব দিই।</p>
+<div class="checks"><span>দক্ষ শিক্ষক</span><span>নিজস্ব মনিটরিং</span><span>নৈতিক শিক্ষা</span><span>নিরাপদ ক্যাম্পাস</span><span>মেধা মূল্যায়ন</span><span>ইনডোর ও আউটডোর কার্যক্রম</span></div>
+<a class="btn primary" href="#profiles">স্কুল সম্পর্কে আরও জানুন →</a></div>
+</div></section>
 
-    <section id="notices">
-      <div class="container">
-        <div class="section-head"><span class="tag">সর্বশেষ আপডেট</span><h2>নোটিশ বোর্ড</h2><p>স্কুলের গুরুত্বপূর্ণ ঘোষণা ও একাডেমিক আপডেট এখানে প্রকাশ করা হবে।</p></div>
-        <div class="notice-list">
-          <div class="notice"><strong>নতুন নোটিশ শিগগিরই প্রকাশ করা হবে।</strong><small>নোটিশ বোর্ড নিয়মিত দেখুন</small></div>
-          <div class="notice"><strong>ভর্তি সংক্রান্ত তথ্যের জন্য স্কুল অফিসে যোগাযোগ করুন।</strong><small>ভর্তি বিভাগ</small></div>
-        </div>
-      </div>
-    </section>
+<section class="section soft" id="profiles"><div class="container"><div class="heading"><span class="kicker">School leadership</span><h2>স্কুলের পরিচিতি</h2><p>প্রতিষ্ঠানের নেতৃত্ব, দিকনির্দেশনা ও প্রাতিষ্ঠানিক পরিচয়।</p></div>
+<div class="profile-grid">
+<article class="profile"><img src="assets/school-story.jpg" alt="স্কুলের প্রাঙ্গণ" onerror="this.style.background='#dce9e1'"><div><h3>আমাদের কথা</h3><p>প্রতিষ্ঠার ইতিহাস, লক্ষ্য, আদর্শ ও শিক্ষার পরিবেশ।</p></div></article>
+<article class="profile"><img src="assets/chairman.jpg" alt="সভাপতির ছবি"><div><h3>সভাপতির বাণী</h3><p>বিদ্যালয় পরিচালনা পর্ষদের সভাপতির শুভেচ্ছা ও দিকনির্দেশনা।</p></div></article>
+<article class="profile"><img src="assets/principal.jpg" alt="প্রধান শিক্ষকের ছবি"><div><h3>প্রধান শিক্ষকের বাণী</h3><p>শিক্ষার্থীদের উদ্দেশ্যে প্রধান শিক্ষকের বক্তব্য ও উপদেশ।</p></div></article>
+<article class="profile"><img src="assets/foundation.jpg" alt="ফাউন্ডেশন"><div><h3>কনকর্ড ফাউন্ডেশন পরিবার</h3><p>ফাউন্ডেশন পরিবারের সদস্যদের তালিকা ও বিস্তারিত পরিচিতি।</p></div></article>
+</div>
+<div class="actiongrid" style="margin-top:16px">
+<a class="action" href="#contact"><span class="symbol">♧</span><span><b>পরিচালনা পর্ষদ</b><span>বিদ্যালয় পরিচালনা পর্ষদের সদস্যদের পরিচিতি।</span></span></a>
+<a class="action" href="#contact"><span class="symbol">♙</span><span><b>শিক্ষকমণ্ডলী</b><span>শিক্ষক-শিক্ষিকাদের পরিচিতি ও দায়িত্ব।</span></span></a>
+<a class="action" href="#contact"><span class="symbol">♧</span><span><b>কর্মচারীবৃন্দ</b><span>প্রতিষ্ঠানের সহায়ক কর্মীদের পরিচিতি।</span></span></a>
+</div></div></section>
 
-    <section class="soft" id="about">
-      <div class="container split">
-        <div><div class="section-head" style="text-align:left;margin-bottom:15px"><span class="tag">আমাদের পরিচয়</span><h2>মছজিদ্দা গ্রামার স্কুল</h2></div>
-          <p>মছজিদ্দা গ্রামার স্কুল একটি শিক্ষাপ্রতিষ্ঠান, যেখানে শিক্ষার্থীদের পাঠ্যজ্ঞান অর্জনের পাশাপাশি নৈতিকতা, শৃঙ্খলা, আত্মবিশ্বাস ও সৃজনশীলতা বিকাশে গুরুত্ব দেওয়া হয়।</p>
-          <ul class="feature-list"><li>শিক্ষার্থীকেন্দ্রিক পাঠদান</li><li>শ্রেণিভিত্তিক শিখন কার্যক্রম</li><li>নৈতিক ও মানবিক মূল্যবোধের চর্চা</li><li>অভিভাবক ও শিক্ষকের সহযোগিতামূলক পরিবেশ</li></ul>
-        </div>
-        <div class="photo-placeholder">এখানে স্কুল ভবন / শিক্ষার্থীদের ছবি যুক্ত করুন<br><small>assets/school-building.jpg</small></div>
-      </div>
-    </section>
+<section class="section" id="academics"><div class="container"><div class="heading"><span class="kicker">Academic information</span><h2>একাডেমিক কার্যক্রম</h2><p>শ্রেণিভিত্তিক পাঠদান, মূল্যায়ন ও শিক্ষার্থীর অগ্রগতি সম্পর্কিত তথ্য।</p></div>
+<div class="cards">
+<article class="card"><img src="assets/academic-features.jpg" alt="একাডেমিক বৈশিষ্ট্য"><div class="cardbody"><span class="tag">01 · Academic</span><h3>বৈশিষ্ট্য</h3><p>প্রতিষ্ঠানের শিক্ষা কার্যক্রম ও বিশেষ বৈশিষ্ট্যসমূহ।</p><a class="btn primary" href="#contact">বিস্তারিত →</a></div></article>
+<article class="card"><img src="assets/rules.jpg" alt="নিয়মাবলি"><div class="cardbody"><span class="tag">02 · Guidelines</span><h3>নিয়মাবলি</h3><p>শিক্ষার্থী ও অভিভাবকদের জন্য প্রয়োজনীয় নিয়ম ও নির্দেশনা।</p><a class="btn primary" href="#contact">বিস্তারিত →</a></div></article>
+<article class="card"><img src="assets/routine.jpg" alt="ক্লাস রুটিন"><div class="cardbody"><span class="tag">03 · Schedule</span><h3>রুটিন</h3><p>শ্রেণিভিত্তিক ক্লাস ও পরীক্ষার সময়সূচি।</p><a class="btn primary" href="#downloads">রুটিন দেখুন ↓</a></div></article>
+<article class="card"><img src="assets/result.jpg" alt="ফলাফল"><div class="cardbody"><span class="tag">04 · Results</span><h3>ফলাফল</h3><p>পরীক্ষার ফলাফল, অগ্রগতি ও মূল্যায়ন সংক্রান্ত তথ্য।</p><a class="btn primary" href="#contact">ফলাফল দেখুন →</a></div></article>
+<article class="card"><img src="assets/learning.jpg" alt="শিক্ষার্থীদের শেখা"><div class="cardbody"><span class="tag">05 · Learning</span><h3>কী শিখছি</h3><p>বিভিন্ন শ্রেণিতে শিক্ষার্থীরা কী শিখছে তার সংক্ষিপ্ত বিবরণ।</p><a class="btn primary" href="#contact">বিস্তারিত →</a></div></article>
+<article class="card"><img src="assets/parent-guideline.jpg" alt="অভিভাবকের করণীয়"><div class="cardbody"><span class="tag">06 · Parent Guide</span><h3>অভিভাবকের করণীয়</h3><p>শিক্ষার্থীর পড়াশোনা, উপস্থিতি ও সার্বিক বিকাশে অভিভাবকের ভূমিকা।</p><a class="btn primary" href="#contact">নির্দেশনা →</a></div></article>
+</div></div></section>
 
-    <section id="history">
-      <div class="container grid-2">
-        <div class="card"><div class="icon">🏫</div><h3>আমাদের ইতিহাস</h3><p>২০১৭ সালে যাত্রা শুরু করা মছজিদ্দা গ্রামার স্কুল স্থানীয় শিক্ষার্থীদের মানসম্মত শিক্ষার সুযোগ তৈরি এবং ধাপে ধাপে শ্রেণি কার্যক্রম সম্প্রসারণের লক্ষ্য নিয়ে এগিয়ে চলেছে।</p></div>
-        <div class="card" id="aims"><div class="icon">🎯</div><h3>লক্ষ্য ও উদ্দেশ্য</h3><p>জ্ঞান, দক্ষতা, নৈতিকতা ও দায়িত্বশীলতার সমন্বয়ে আত্মবিশ্বাসী, মানবিক এবং সৃজনশীল প্রজন্ম গড়ে তোলা।</p></div>
-      </div>
-    </section>
+<section class="section feature-band"><div class="container feature-layout"><div><span class="kicker" style="color:#f0c66c">Why choose us</span><h2>কেন আমরাই সেরা?</h2><p>মছজিদ্দা গ্রামার স্কুলের বিশেষ বৈশিষ্ট্যসমূহ—শিক্ষার্থী, শিক্ষক ও পরিবারের সম্মিলিত অগ্রযাত্রা।</p></div>
+<div class="feature-cards"><div class="feature"><div class="ico">👨‍🏫</div><b>দক্ষ শিক্ষক</b><p>যত্নশীল পাঠদান ও শিক্ষার্থীর অগ্রগতিতে নিয়মিত মনোযোগ।</p></div><div class="feature"><div class="ico">📝</div><b>নিজস্ব মনিটরিং</b><p>শিক্ষার্থীর শেখা ও নিয়মিত অগ্রগতি পর্যবেক্ষণ।</p></div><div class="feature"><div class="ico">△</div><b>নৈতিক শিক্ষা</b><p>শৃঙ্খলা, মূল্যবোধ ও দায়িত্বশীল আচরণে উৎসাহ।</p></div><div class="feature"><div class="ico">🎥</div><b>বিনোদন ক্লাস</b><p>শেখার পাশাপাশি সৃজনশীল ও অংশগ্রহণমূলক কার্যক্রম।</p></div><div class="feature"><div class="ico">📊</div><b>মেধা মূল্যায়ন</b><p>নিয়মিত মূল্যায়নের মাধ্যমে অগ্রগতি চিহ্নিত করা।</p></div><div class="feature"><div class="ico">⚽</div><b>ইনডোর ও আউটডোর</b><p>শারীরিক ও সামাজিক বিকাশে খেলাধুলার সুযোগ।</p></div></div></div></section>
 
-    <section class="soft" id="messages">
-      <div class="container grid-2">
-        <div class="quote" id="chairman"><h3>সভাপতির বাণী</h3><p>শিক্ষার মানোন্নয়ন ও শিক্ষার্থীদের সার্বিক বিকাশে শিক্ষক, অভিভাবক ও পরিচালনা পর্ষদের সম্মিলিত সহযোগিতা অত্যন্ত গুরুত্বপূর্ণ।</p><div class="person">সভাপতি<br>মছজিদ্দা গ্রামার স্কুল</div></div>
-        <div class="quote" id="director"><h3>পরিচালকের বাণী</h3><p>আমাদের প্রত্যাশা—প্রতিটি শিক্ষার্থী জ্ঞান, শৃঙ্খলা, মানবিকতা ও আত্মবিশ্বাসে সমৃদ্ধ হয়ে নিজের এবং দেশের কল্যাণে ভূমিকা রাখবে।</p><div class="person">মোঃ জাহিদুল ইসলাম<br>পরিচালক ও অধ্যক্ষ</div></div>
-      </div>
-    </section>
+<section class="section soft" id="admission"><div class="container"><div class="heading"><span class="kicker">Admission information</span><h2>ভর্তি তথ্য</h2><p>ভর্তি প্রক্রিয়া, প্রয়োজনীয় ফরম ও কাগজপত্র সম্পর্কে জানুন।</p></div>
+<div class="cards">
+<article class="card"><img src="assets/admission-guideline.jpg" alt="ভর্তি নির্দেশিকা"><div class="cardbody"><h3>নির্দেশিকা</h3><p>ভর্তির যোগ্যতা, প্রয়োজনীয় শর্ত ও নির্দেশনা।</p><a class="btn primary" href="#contact">বিস্তারিত →</a></div></article>
+<article class="card"><img src="assets/admission-form.jpg" alt="ভর্তি ফরম"><div class="cardbody"><h3>ফরম</h3><p>ভর্তি ফরম সংগ্রহ ও জমা দেওয়ার নিয়ম।</p><a class="btn primary" href="#contact">ফরম সম্পর্কে →</a></div></article>
+<article class="card"><img src="assets/admission-documents.jpg" alt="ভর্তির কাগজপত্র"><div class="cardbody"><h3>কাগজপত্র</h3><p>ভর্তির সময় প্রয়োজনীয় কাগজপত্রের তালিকা।</p><a class="btn primary" href="#contact">তালিকা দেখুন →</a></div></article>
+</div></div></section>
 
-    <section id="academic">
-      <div class="container">
-        <div class="section-head"><span class="tag">শিক্ষা কার্যক্রম</span><h2>একাডেমিক তথ্য</h2><p>শ্রেণিভিত্তিক পাঠদান ও নিয়মিত মূল্যায়নের মাধ্যমে শিক্ষার্থীদের শিখন অগ্রগতি নিশ্চিত করার প্রচেষ্টা।</p></div>
-        <div class="grid-3">
-          <div class="card"><div class="icon">📖</div><h3>শ্রেণি পরিচিতি</h3><p>প্লে থেকে অষ্টম শ্রেণি (পর্যায়ক্রমে দশম)।</p></div>
-          <div class="card" id="calendar"><div class="icon">📅</div><h3>একাডেমিক ক্যালেন্ডার</h3><p>শিক্ষাবর্ষের ছুটি, পরীক্ষা ও গুরুত্বপূর্ণ কার্যক্রমের সময়সূচি এখানে যুক্ত হবে।</p></div>
-          <div class="card" id="routine"><div class="icon">🕘</div><h3>ক্লাস ও পরীক্ষার রুটিন</h3><p>হালনাগাদ ক্লাস রুটিন ও পরীক্ষার সময়সূচি প্রকাশ করা হবে।</p></div>
-        </div>
-      </div>
-    </section>
+<section class="section" id="activities"><div class="container"><div class="heading"><span class="kicker">Beyond the classroom</span><h2>সহশিক্ষা কার্যক্রম</h2><p>শিক্ষার্থীদের প্রতিভা, নেতৃত্ব, সৃজনশীলতা ও দলগত দক্ষতা বিকাশে বিভিন্ন আয়োজন।</p></div>
+<div class="cards">
+<article class="card"><img src="assets/sports.jpg" alt="খেলাধুলা"><div class="cardbody"><h3>ক্রীড়া</h3><p>বার্ষিক ক্রীড়া, ফুটবল ও বিভিন্ন খেলাধুলা।</p><a class="btn primary" href="#gallery">ছবি দেখুন →</a></div></article>
+<article class="card"><img src="assets/culture.jpg" alt="সাংস্কৃতিক অনুষ্ঠান"><div class="cardbody"><h3>সংস্কৃতি</h3><p>গান, নাচ, আবৃত্তি ও সাংস্কৃতিক অনুষ্ঠান।</p><a class="btn primary" href="#gallery">বিস্তারিত →</a></div></article>
+<article class="card"><img src="assets/debate.jpg" alt="বিতর্ক"><div class="cardbody"><h3>বিতর্ক</h3><p>বিতর্ক চর্চা ও বক্তব্য উপস্থাপনার আয়োজন।</p><a class="btn primary" href="#gallery">বিস্তারিত →</a></div></article>
+</div></div></section>
 
-    <section class="soft" id="admission">
-      <div class="container">
-        <div class="section-head"><span class="tag">ভর্তি কার্যক্রম</span><h2>ভর্তি চলছে</h2><p>ভর্তি, প্রয়োজনীয় কাগজপত্র ও ফি সংক্রান্ত বিস্তারিত জানতে স্কুল অফিসে যোগাযোগ করুন।</p></div>
-        <div class="grid-3">
-          <div class="card"><div class="icon">🧾</div><h3>ভর্তি প্রক্রিয়া</h3><p>ভর্তি ফরম ও প্রয়োজনীয় তথ্যের জন্য স্কুল অফিস থেকে নির্দেশনা সংগ্রহ করুন।</p></div>
-          <div class="card"><div class="icon">📋</div><h3>প্রয়োজনীয় কাগজপত্র</h3><p>শিক্ষার্থীর প্রয়োজনীয় কাগজপত্রের তালিকা ভর্তি অফিস থেকে জেনে নিন।</p></div>
-          <div class="card"><div class="icon">☎️</div><h3>ভর্তি বিষয়ে যোগাযোগ</h3><p>ফোন: 09649-978797</p><a class="btn btn-gold" href="tel:09649978797">এখনই কল করুন</a></div>
-        </div>
-      </div>
-    </section>
+<section class="section soft" id="downloads"><div class="container"><div class="heading"><span class="kicker">Resources & downloads</span><h2>ডাউনলোড জোন</h2><p>শিক্ষার্থী ও অভিভাবকদের জন্য প্রয়োজনীয় ঘোষণা, ক্যালেন্ডার ও ডিজিটাল সেবা।</p></div>
+<div class="actiongrid">
+<a class="action" href="#notice"><span class="symbol">🔔</span><span><b>নোটিশ</b><span>সকল গুরুত্বপূর্ণ নোটিশ ও ঘোষণা।</span></span></a>
+<a class="action" href="#contact"><span class="symbol">▦</span><span><b>ছুটির তালিকা</b><span>একাডেমিক ছুটির তালিকা ও ক্যালেন্ডার।</span></span></a>
+<a class="action" href="#contact"><span class="symbol">▣</span><span><b>অ্যাপ</b><span>স্কুলের ডিজিটাল সেবা ও অ্যাপ সংক্রান্ত তথ্য।</span></span></a>
+<a class="action" href="#academics"><span class="symbol">▤</span><span><b>ক্লাস রুটিন</b><span>শ্রেণিভিত্তিক ক্লাস রুটিন।</span></span></a>
+<a class="action" href="#academics"><span class="symbol">📈</span><span><b>পরীক্ষার ফলাফল</b><span>পরীক্ষার ফলাফল ও মূল্যায়ন।</span></span></a>
+<a class="action" href="#contact"><span class="symbol">📱</span><span><b>অভিভাবক সেবা</b><span>স্কুলের সঙ্গে যোগাযোগ ও তথ্য সহায়তা।</span></span></a>
+</div></div></section>
 
-    <section id="certificates">
-      <div class="container">
-        <div class="section-head"><span class="tag">প্রাতিষ্ঠানিক তথ্য</span><h2>সরকারি অনুমোদন ও নিবন্ধন</h2><p>প্রতিষ্ঠানের পাঠদান অনুমতি ও নিবন্ধন সংক্রান্ত সনদপত্রের কপি এখানে সংযুক্ত করা হবে।</p></div>
-        <div class="grid-2">
-          <div class="card certificate"><div class="icon">📜</div><div><h3>পাঠদান অনুমতির সনদ</h3><p>মূল সনদের কপি দেখতে বা ডাউনলোড করতে নিচের লিংক ব্যবহার করুন।</p><a href="assets/approval-registration.pdf" target="_blank" rel="noopener">সনদপত্র দেখুন / ডাউনলোড</a></div></div>
-          <div class="card certificate"><div class="icon">🏅</div><div><h3>নিবন্ধন সনদ</h3><p>নিবন্ধন সংক্রান্ত মূল নথির কপি একই PDF ফাইলে সংযুক্ত থাকবে।</p><a href="assets/approval-registration.pdf" target="_blank" rel="noopener">নিবন্ধন সনদ দেখুন</a></div></div>
-        </div>
-      </div>
-    </section>
+<section class="section" id="gallery"><div class="container"><div class="heading"><span class="kicker">Moments & achievements</span><h2>গ্যালারি</h2><p>বিদ্যালয়ের স্মরণীয় মুহূর্ত, শিক্ষার্থীদের অংশগ্রহণ ও অর্জনের ছবি।</p></div>
+<div class="gallery"><img src="assets/gallery-1.jpg" alt="স্কুলের ছবি ১"><img src="assets/gallery-2.jpg" alt="স্কুলের ছবি ২"><img src="assets/gallery-3.jpg" alt="স্কুলের ছবি ৩"><img src="assets/gallery-4.jpg" alt="স্কুলের ছবি ৪"><img src="assets/gallery-5.jpg" alt="স্কুলের ছবি ৫"></div>
+<div class="hero-actions" style="justify-content:center;margin-top:22px"><a class="btn outline" href="#contact">আরও ছবি ও ভিডিও ↗</a><a class="btn outline" href="#contact">অর্জন ও সম্মাননা ↗</a></div>
+</div></section>
 
-    <section class="soft" id="digital">
-      <div class="container">
-        <div class="section-head"><span class="tag">প্রযুক্তিনির্ভর শিক্ষা</span><h2>ডিজিটাল শিক্ষা ও সেবা</h2><p>প্রাতিষ্ঠানিক কার্যক্রমকে আরও সহজ, সুশৃঙ্খল ও প্রযুক্তিবান্ধব করার উদ্যোগ।</p></div>
-        <div class="grid-3">
-          <div class="card service-card"><div class="icon">📱</div><h3>নিজস্ব স্কুল অ্যাপ</h3><p>স্কুলের অ্যাপের মাধ্যমে প্রকাশিত তথ্য ও আপডেট পেতে ব্যবহার করুন।</p><a class="pill" href="https://play.google.com/store/apps/details?id=com.excelmahmud.mgschool" target="_blank" rel="noopener">Google Play-তে দেখুন ↗</a></div>
-          <div class="card service-card"><div class="icon">👆</div><h3>ডিজিটাল হাজিরা</h3><p>শিক্ষার্থীদের উপস্থিতি ব্যবস্থাপনায় ডিজিটাল ফিঙ্গারপ্রিন্ট হাজিরা ব্যবস্থার ব্যবহার।</p></div>
-          <div class="card service-card"><div class="icon">📹</div><h3>সিসিটিভি নিরাপত্তা</h3><p>প্রতিষ্ঠানের নিরাপত্তা ও সার্বিক পরিবেশ পর্যবেক্ষণে সিসিটিভি ব্যবস্থা।</p></div>
-        </div>
-      </div>
-    </section>
+<section class="cta"><div class="container inner"><div><h2>আপনার সন্তানের সুন্দর ভবিষ্যতের যাত্রা শুরু হোক</h2><p>ভর্তি ও একাডেমিক তথ্যের জন্য স্কুল অফিসে যোগাযোগ করুন।</p></div><a class="btn gold" href="#contact">যোগাযোগ করুন ↗</a></div></section>
 
-    <section id="special">
-      <div class="container">
-        <div class="section-head"><span class="tag">বিশেষ উদ্যোগ</span><h2>বিশেষ শিক্ষা কার্যক্রম</h2><p>পাঠ্যবইয়ের পাশাপাশি ভাষা, সৃজনশীলতা, স্বশিক্ষা ও নৈতিক বিকাশে সহায়ক কার্যক্রম।</p></div>
-        <div class="grid-3">
-          <div class="card"><div class="icon">🗣️</div><h3>স্পোকেন ইংলিশ</h3><p>শিক্ষার্থীদের দৈনন্দিন কথোপকথন, শব্দভান্ডার ও ইংরেজিতে কথা বলার আত্মবিশ্বাস বৃদ্ধির অনুশীলন।</p></div>
-          <div class="card"><div class="icon">✍️</div><h3>নিজস্ব হ্যান্ডনোট</h3><p>পাঠ্যবিষয় বুঝতে ও পুনরাবৃত্তিতে সহায়ক নিজস্ব শিক্ষাসামগ্রী ও হ্যান্ডনোট।</p></div>
-          <div class="card"><div class="icon">💡</div><h3>স্বশিক্ষা ও সৃজনশীল শিক্ষা</h3><p>নিজে শেখা, প্রশ্ন করা, চিন্তা করা ও সৃজনশীল কাজে অংশগ্রহণে উৎসাহ প্রদান।</p></div>
-          <div class="card"><div class="icon">🌱</div><h3>শিখন অগ্রগতি মূল্যায়ন</h3><p>শিক্ষার্থীর শেখার অগ্রগতি পর্যবেক্ষণ ও প্রয়োজন অনুযায়ী সহায়তার উদ্যোগ।</p></div>
-          <div class="card"><div class="icon">🤝</div><h3>ধর্মীয় ও নৈতিক শিক্ষা</h3><p>শিক্ষার্থীদের নিজ নিজ ধর্মীয় রীতি অনুযায়ী দোয়া, সূরা, মন্ত্র ও শ্লোক শিক্ষার পাশাপাশি মানবিক মূল্যবোধের চর্চা।</p></div>
-          <div class="card"><div class="icon">⭐</div><h3>আত্মবিশ্বাস ও নেতৃত্ব</h3><p>দলীয় কাজ, উপস্থাপনা ও সহশিক্ষা কার্যক্রমের মাধ্যমে আত্মবিশ্বাস গড়ে তোলা।</p></div>
-        </div>
-      </div>
-    </section>
+<section class="section soft" id="notice"><div class="container"><div class="heading"><span class="kicker">Latest updates</span><h2>নোটিশ বোর্ড ও সংবাদ</h2><p>স্কুলের সর্বশেষ ঘোষণা, পরীক্ষা, ছুটি ও কার্যক্রমের তথ্য।</p></div>
+<div class="dual"><div class="panel"><h3>সর্বশেষ নোটিশ</h3>
+<div class="listrow"><div class="date"><b>০১</b>নোটিশ</div><div><strong>এখানে সর্বশেষ নোটিশ যুক্ত করুন</strong><small>প্রকাশের তারিখ ও সংক্ষিপ্ত বিবরণ যোগ করুন।</small></div></div>
+<div class="listrow"><div class="date"><b>০২</b>নোটিশ</div><div><strong>পরীক্ষা ও মূল্যায়ন সংক্রান্ত ঘোষণা</strong><small>প্রকৃত নোটিশ প্রকাশের পর এই লেখা পরিবর্তন করুন।</small></div></div>
+<div class="listrow"><div class="date"><b>০৩</b>নোটিশ</div><div><strong>ভর্তি ও ছুটির তথ্য</strong><small>সঠিক তারিখ ও নির্দেশনা যুক্ত করুন।</small></div></div>
+</div><div class="panel"><h3>সংবাদ ও কার্যক্রম</h3><img src="assets/news.jpg" alt="বিদ্যালয়ের সংবাদ" style="width:100%;height:145px;object-fit:cover;border-radius:8px;background:#dce9e1"><p style="color:var(--muted);font-size:13px">বার্ষিক অনুষ্ঠান, শিক্ষার্থীদের অর্জন, প্রতিযোগিতা ও বিদ্যালয়ের গুরুত্বপূর্ণ কার্যক্রমের সংবাদ এখানে প্রকাশ করুন।</p><a class="btn primary" href="#gallery">গ্যালারি দেখুন →</a></div></div>
+</div></section>
 
-    <section class="soft" id="teachers">
-      <div class="container">
-        <div class="section-head"><span class="tag">আমাদের পরিবার</span><h2>শিক্ষক ও কর্মচারী</h2><p>দক্ষ ও দায়িত্বশীল শিক্ষক-কর্মচারীদের সম্মিলিত প্রচেষ্টায় পরিচালিত শিক্ষাকার্যক্রম।</p></div>
-        <div class="grid-2">
-          <div class="card"><div class="icon">👨‍🏫</div><h3>শিক্ষক প্যানেল</h3><p>শিক্ষকবৃন্দের নাম, ছবি, শিক্ষাগত যোগ্যতা ও দায়িত্বের বিস্তারিত তথ্য এখানে যুক্ত হবে।</p></div>
-          <div class="card"><div class="icon">🧑‍💼</div><h3>কর্মচারী পরিচিতি</h3><p>প্রতিষ্ঠানের প্রশাসনিক ও সহায়ক কর্মীদের পরিচিতি এখানে প্রকাশ করা হবে।</p></div>
-        </div>
-      </div>
-    </section>
+<section class="section" id="contact"><div class="container"><div class="heading"><span class="kicker">Contact our school</span><h2>যোগাযোগ করুন</h2><p>ভর্তি, একাডেমিক তথ্য ও অন্যান্য প্রয়োজনে আমাদের সঙ্গে যোগাযোগ করুন।</p></div>
+<div class="contact"><div class="contact-list">
+<div class="contactitem"><div class="symbol">⌖</div><div><b>ঠিকানা</b><span>মছজিদ্দা গ্রামার স্কুল, ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম।</span></div></div>
+<div class="contactitem"><div class="symbol">☎</div><div><b>মোবাইল</b><span><a href="tel:09649978797">09649-978797</a><br><a href="tel:01880187187">01880-187187</a></span></div></div>
+<div class="contactitem"><div class="symbol">✉</div><div><b>ই-মেইল</b><span><a href="mailto:mgschool3@gmail.com">mgschool3@gmail.com</a></span></div></div>
+<div class="contactitem"><div class="symbol">◷</div><div><b>অফিস সময়</b><span>সঠিক অফিস সময় স্কুল কর্তৃপক্ষের কাছ থেকে নিশ্চিত করে যুক্ত করুন।</span></div></div>
+</div><div class="map"><div><div style="font-size:34px">⌖</div><b>Find Masjidda Grammar School</b><p>Google Maps-এ স্কুলের সঠিক লোকেশন দেখতে নিচের লিংক যুক্ত করুন।</p><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Masjidda+Grammar+School+Choto+Kumira+Sitakunda" target="_blank" rel="noopener">Google Maps খুলুন ↗</a></div></div></div>
+</div></section>
+</main>
 
-    <section id="students">
-      <div class="container">
-        <div class="section-head"><span class="tag">শিক্ষার্থী সহায়তা</span><h2>শিক্ষার্থী কর্নার</h2><p>শিক্ষার্থীদের প্রয়োজনীয় শিক্ষা উপকরণ ও তথ্য এক জায়গায়।</p></div>
-        <div class="grid-3">
-          <div class="card"><div class="icon">📚</div><h3>সিলেবাস ও শিক্ষাসামগ্রী</h3><p>শ্রেণিভিত্তিক সিলেবাস ও প্রয়োজনীয় শিক্ষা উপকরণ প্রকাশ করা হবে।</p></div>
-          <div class="card" id="results"><div class="icon">🏆</div><h3>ফলাফল</h3><p>পরীক্ষার ফলাফল ও মূল্যায়ন-সংক্রান্ত তথ্য স্কুল কর্তৃপক্ষের প্রকাশনা অনুযায়ী যুক্ত হবে।</p></div>
-          <div class="card" id="parents"><div class="icon">👨‍👩‍👧</div><h3>অভিভাবক কর্নার</h3><p>উপস্থিতি, ফলাফল, নোটিশ ও শিক্ষার্থীর অগ্রগতি বিষয়ে স্কুল অফিসের মাধ্যমে তথ্য পাওয়া যাবে।</p></div>
-        </div>
-      </div>
-    </section>
+<footer><div class="container"><div class="footgrid">
+<div><div class="footbrand"><img src="assets/logo.png" alt="লোগো" onerror="this.style.display='none'"><b>মছজিদ্দা গ্রামার স্কুল<br><small style="font:700 9px Manrope">MASJIDDA GRAMMAR SCHOOL</small></b></div><p>উপজেলায় শিক্ষায় ডিজিটাল বিবর্তন—শিক্ষার্থী, শিক্ষক ও স্কুল ব্যবস্থাপনায় আমাদের অগ্রযাত্রা।</p></div>
+<div><h4>প্রতিষ্ঠান</h4><div class="footlinks"><a href="#about">আমাদের কথা</a><a href="#profiles">সভাপতির বাণী</a><a href="#profiles">প্রধান শিক্ষকের বাণী</a><a href="#profiles">শিক্ষকমণ্ডলী</a></div></div>
+<div><h4>একাডেমিক</h4><div class="footlinks"><a href="#academics">একাডেমিক কার্যক্রম</a><a href="#admission">ভর্তি তথ্য</a><a href="#activities">সহশিক্ষা কার্যক্রম</a><a href="#downloads">ডাউনলোড জোন</a></div></div>
+<div><h4>যোগাযোগ</h4><div class="footlinks"><span>ছোট কুমিরা, সীতাকুণ্ড</span><a href="tel:09649978797">09649-978797</a><a href="mailto:mgschool3@gmail.com">mgschool3@gmail.com</a><a href="#contact">Google Maps</a></div></div>
+</div><div class="copyright"><span>© <span id="year"></span> মছজিদ্দা গ্রামার স্কুল। সর্বস্বত্ব সংরক্ষিত।</span><span>Official School Website · Masjidda Grammar School</span></div></div></footer>
 
-    <section class="soft" id="activities">
-      <div class="container">
-        <div class="section-head"><span class="tag">শ্রেণিকক্ষের বাইরে</span><h2>সহশিক্ষা কার্যক্রম ও অর্জন</h2><p>খেলাধুলা, সাংস্কৃতিক অনুষ্ঠান, বার্ষিক আয়োজন ও শিক্ষার্থীদের সাফল্যের মুহূর্ত।</p></div>
-        <div class="grid-3">
-          <div class="card"><div class="icon">⚽</div><h3>খেলাধুলা</h3><p>শারীরিক সক্ষমতা, দলীয় মনোভাব ও খেলাধুলার চর্চা।</p></div>
-          <div class="card"><div class="icon">🎭</div><h3>সাংস্কৃতিক অনুষ্ঠান</h3><p>সাংস্কৃতিক ও সৃজনশীল প্রতিভা বিকাশের আয়োজন।</p></div>
-          <div class="card"><div class="icon">🥇</div><h3>শিক্ষার্থীদের অর্জন</h3><p>শিক্ষার্থীদের উল্লেখযোগ্য সাফল্য ও পুরস্কারপ্রাপ্তির তথ্য এখানে প্রকাশিত হবে।</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <div class="container">
-        <div class="section-head"><span class="tag">স্মৃতির অ্যালবাম</span><h2>ছবি ও ভিডিও গ্যালারি</h2><p>স্কুলের শিক্ষা কার্যক্রম, অনুষ্ঠান ও বিশেষ মুহূর্তের ছবি এখানে যুক্ত করুন।</p></div>
-        <div class="gallery-grid">
-          <div class="gallery-box">স্কুল ক্যাম্পাসের ছবি</div><div class="gallery-box">শ্রেণিকক্ষের ছবি</div><div class="gallery-box">বার্ষিক অনুষ্ঠানের ছবি</div><div class="gallery-box">খেলাধুলার ছবি</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="soft" id="downloads">
-      <div class="container">
-        <div class="section-head"><span class="tag">প্রয়োজনীয় নথি</span><h2>ডাউনলোড জোন</h2><p>ভর্তি ফরম, সিলেবাস, রুটিন ও প্রয়োজনীয় ফরমের ফাইল যুক্ত করা হবে।</p></div>
-        <div class="grid-3">
-          <div class="card"><div class="icon">📄</div><h3>ভর্তি ফরম</h3><p>প্রকাশের পর এখান থেকে ডাউনলোড করা যাবে।</p></div>
-          <div class="card"><div class="icon">📘</div><h3>সিলেবাস</h3><p>শ্রেণিভিত্তিক সিলেবাসের PDF যুক্ত হবে।</p></div>
-          <div class="card"><div class="icon">🗓️</div><h3>রুটিন ও প্রয়োজনীয় ফরম</h3><p>হালনাগাদ রুটিন ও অন্যান্য ফরম যুক্ত হবে।</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="section-head"><span class="tag">আমাদের সঙ্গে যোগাযোগ</span><h2>যোগাযোগ</h2><p>ভর্তি, একাডেমিক তথ্য বা অন্যান্য প্রয়োজনে যোগাযোগ করুন।</p></div>
-        <div class="grid-2">
-          <div class="card contact-card">
-            <h3>মছজিদ্দা গ্রামার স্কুল</h3>
-            <p>📍 ঠিকানা: মছজিদ্দা, ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</p>
-            <p>☎️ ফোন: <a href="tel:09649978797">09649-978797</a></p>
-            <p>✉️ ই-মেইল: <a href="mailto:official.mgschool@gmail.com">official.mgschool@gmail.com</a></p>
-            <p>💬 WhatsApp: <a href="https://wa.me/8801875978797" target="_blank" rel="noopener">01875978797</a></p>
-            <p>📘 Facebook: <a href="https://www.facebook.com/mgschool.Sitakunda" target="_blank" rel="noopener">স্কুলের Facebook Page</a></p>
-            <p>🗺️ Google Maps: <a href="https://maps.app.goo.gl/2RcqZKBLnSmkLEp56?g_st=ac" target="_blank" rel="noopener">অবস্থান দেখুন</a></p>
-          </div>
-          <div><iframe class="map-frame" src="https://www.google.com/maps?q=Masjidda%20Grammar%20School%2C%20Sitakunda%2C%20Chattogram&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="মছজিদ্দা গ্রামার স্কুলের মানচিত্র"></iframe></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="fixed-services" aria-label="দ্রুত যোগাযোগ">
-    <a href="https://wa.me/8801875978797" target="_blank" rel="noopener">WhatsApp</a>
-    <a href="#downloads">ই-সেবা</a>
-  </div>
-
-  <footer>
-    <div class="container">
-      <div class="school">মছজিদ্দা গ্রামার স্কুল</div>
-      <div class="copyright">২০২৭ মছজিদ্দা গ্রামার স্কুল | সর্বস্বত্ব সংরক্ষিত।</div>
-      <div class="tech">কারিগরি সহযোগিতায়: জায়েন আইটি ক্লাব</div>
-    </div>
-  </footer>
-
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const nav = document.getElementById('mainNav');
-    menuBtn.addEventListener('click', () => {
-      const opened = nav.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', opened ? 'true' : 'false');
-      menuBtn.textContent = opened ? '✕' : '☰';
-    });
-    // মোবাইলে ড্রপডাউন মেনু ট্যাপ করে খোলা/বন্ধ হবে
-    document.querySelectorAll('#mainNav li.has-drop > a').forEach(link => {
-      link.addEventListener('click', event => {
-        if (window.matchMedia('(max-width: 1050px)').matches) {
-          const li = link.parentElement;
-          if (!li.classList.contains('expanded')) {
-            event.preventDefault();
-            li.classList.add('expanded');
-          }
-        }
-      });
-    });
-    document.querySelectorAll('#mainNav a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.matchMedia('(max-width: 1050px)').matches && !link.parentElement.classList.contains('has-drop')) {
-          nav.classList.remove('open');
-          menuBtn.setAttribute('aria-expanded', 'false');
-          menuBtn.textContent = '☰';
-        }
-      });
-    });
-  </script>
+<div class="fixed"><a class="f-adm" href="#admission">▣ অনলাইন ভর্তি</a><a class="f-msg" href="https://wa.me/8809649978797" target="_blank" rel="noopener">▣ বার্তা প্রেরণ</a></div>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
+const navGroups=[...links.querySelectorAll('.navgroup')];
+navGroups.forEach(group=>{const button=group.querySelector('.navparent');button.addEventListener('click',()=>{const willOpen=!group.classList.contains('open');navGroups.forEach(other=>{other.classList.remove('open');other.querySelector('.navparent').setAttribute('aria-expanded','false')});if(willOpen){group.classList.add('open');button.setAttribute('aria-expanded','true')}})});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navGroups.forEach(group=>{group.classList.remove('open');group.querySelector('.navparent').setAttribute('aria-expanded','false')});links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+document.addEventListener('click',event=>{if(!links.contains(event.target)){navGroups.forEach(group=>{group.classList.remove('open');group.querySelector('.navparent').setAttribute('aria-expanded','false')})}});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
