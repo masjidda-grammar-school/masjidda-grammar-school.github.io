@@ -78,9 +78,19 @@ html{scroll-padding-top:90px}.menu{display:block}.nav{flex-wrap:nowrap;padding:0
 .hero h1{font-size:38px}.hero p{font-size:16px}.visual{height:300px}.visual:before{display:none}.visual-main{inset:0 30px 30px 0;width:calc(100% - 30px);height:calc(100% - 30px);border-radius:22px 22px 22px 60px}.visual-campus{border-width:5px;border-radius:16px}.visual-tag{left:-4px;bottom:46px;padding:10px 14px}
 .section{padding:64px 0}.stat strong{font-size:25px}.stat{padding:20px 10px}.cards,.actiongrid,.feature-cards,.checks{grid-template-columns:1fr}.about-img{height:300px;border-radius:70px 20px 20px 20px}.card img{height:200px}.profile-grid{grid-template-columns:1fr 1fr;gap:12px}.profile img{height:150px}.profile div{padding:13px}.profile h3{font-size:15px}
 .gallery{grid-template-columns:1fr 1fr;grid-template-rows:150px 125px}.gallery img:first-child{grid-column:span 2;grid-row:auto}.cta .inner{align-items:flex-start;flex-direction:column}.footgrid{grid-template-columns:1fr 1fr;gap:26px 16px}.copyright{flex-direction:column}.fixed{right:10px;bottom:10px}.fixed a{font-size:11px;padding:9px 13px}}
+@media(max-width:600px){.nav{gap:8px}.brand-wrap{gap:8px}.brand{gap:7px;min-width:0}.brand img{width:40px;height:40px}header.compact .brand img{width:38px;height:38px}.brand b{white-space:nowrap;font-size:clamp(11.5px,3.6vw,15px);line-height:1.3}.brand small{white-space:nowrap;font-size:clamp(5.5px,1.75vw,7.5px);letter-spacing:.07em}.brand-admission{font-size:10.5px;padding:7px 9px}.menu{width:40px;height:40px;font-size:20px;flex:0 0 auto}}
+@media(min-width:601px){.fixed a{display:inline-flex;align-items:center;gap:8px}.fixed i{font-style:normal}}
+@media(max-width:600px){.fixed{right:12px;bottom:14px;gap:10px}.fixed a{width:48px;height:48px;padding:0;display:grid;place-items:center;border-radius:50%}.fixed a span{display:none}.fixed a i{font-style:normal;font-size:20px;line-height:1}}
+.ticker{overflow:hidden;margin:-4px 0 6px;padding:11px 0;background:linear-gradient(90deg,#fffaf0,#fff);border-bottom:1px solid var(--line);position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}.ticker-track{display:flex;width:max-content;animation:tick 28s linear infinite}.ticker:hover .ticker-track{animation-play-state:paused}.ticker span{white-space:nowrap;padding:0 28px;font-size:14px;font-weight:600;color:var(--gd)}.ticker span:before{content:"●";color:var(--gold);font-size:9px;margin-right:10px;vertical-align:2px}.ticker .dup{display:none}@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none;flex-wrap:wrap;width:auto}.ticker span[aria-hidden]{display:none}}
+.newsbar{background:#061a15;color:#fff;border-bottom:1px solid #c9a24b44}.newsbar-in{display:flex;align-items:stretch;gap:14px}.newsbar b{flex:0 0 auto;display:flex;align-items:center;background:var(--gg);color:#2a2410;padding:0 16px;font-size:13px;font-weight:700;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,0 100%);padding-right:24px}.newsbar .ticker{flex:1;min-width:0;margin:0;padding:9px 0;background:transparent;border:0}.newsbar .ticker span{color:#f3ead0;font-size:13.5px}
+@media(max-width:600px){.newsbar b{padding:0 14px 0 10px;font-size:12px}.newsbar .ticker span{font-size:12.5px}}
+.newsbar{position:sticky;top:0;z-index:101}header{top:var(--nb,40px)}html{scroll-padding-top:calc(150px + var(--nb,40px))}
+@media(max-width:1050px){html{scroll-padding-top:calc(90px + var(--nb,40px))}}
 </style>
 </head>
 <body>
+<div class="newsbar"><div class="container newsbar-in"><b>🔔 নোটিশ</b><div class="ticker" role="marquee" aria-label="নোটিশ"><div class="ticker-track"><span>নতুন ভর্তি — ১৫ নভেম্বর, ২০২৬</span><span>নতুন ভর্তি — ১৫ নভেম্বর, ২০২৬</span><span>নতুন ভর্তি — ১৫ নভেম্বর, ২০২৬</span><span>নতুন ভর্তি — ১৫ নভেম্বর, ২০২৬</span><span aria-hidden="true">নতুন ভর্তি — ১৫ নভেম্বর, ২০২৬</span><span aria-hidden="true">নতুন ভর্তি — ১৫ নভেম্বর, ২০২৬</span><span aria-hidden="true">নতুন ভর্তি — ১৫ নভেম্বর, ২০২৬</span><span aria-hidden="true">নতুন ভর্তি — ১৫ নভেম্বর, ২০২৬</span></div></div></div></div>
 <div class="topline"><div class="container"><span>📍 ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম</span><span>গণপ্রজাতন্ত্রী বাংলাদেশ সরকার কর্তৃক অনুমোদিত ও নিবন্ধিত</span></div></div>
 <header><div class="container nav">
 <div class="brand-wrap"><a class="brand" href="#home"><img src="assets/logo.png" alt="স্কুলের লোগো" onerror="this.style.display='none'"><span><b>মছজিদ্দা গ্রামার স্কুল</b><small>MASJIDDA GRAMMAR SCHOOL</small></span></a><a class="brand-admission" href="https://forms.gle/YZbGRg7dq4JRbjUb8" target="_blank" rel="noopener">অনলাইন ভর্তি ↗</a></div>
@@ -194,9 +204,9 @@ html{scroll-padding-top:90px}.menu{display:block}.nav{flex-wrap:nowrap;padding:0
 
 <section class="section soft" id="notice"><div class="container"><div class="heading"><span class="kicker">Latest updates</span><h2>নোটিশ বোর্ড ও সংবাদ</h2><p>স্কুলের সর্বশেষ ঘোষণা, পরীক্ষা, ছুটি ও কার্যক্রমের তথ্য।</p></div>
 <div class="dual"><div class="panel"><h3>সর্বশেষ নোটিশ</h3>
-<div class="listrow"><div class="date"><b>০১</b>নোটিশ</div><div><strong>এখানে সর্বশেষ নোটিশ যুক্ত করুন</strong><small>প্রকাশের তারিখ ও সংক্ষিপ্ত বিবরণ যোগ করুন।</small></div></div>
-<div class="listrow"><div class="date"><b>০২</b>নোটিশ</div><div><strong>পরীক্ষা ও মূল্যায়ন সংক্রান্ত ঘোষণা</strong><small>প্রকৃত নোটিশ প্রকাশের পর এই লেখা পরিবর্তন করুন।</small></div></div>
-<div class="listrow"><div class="date"><b>০৩</b>নোটিশ</div><div><strong>ভর্তি ও ছুটির তথ্য</strong><small>সঠিক তারিখ ও নির্দেশনা যুক্ত করুন।</small></div></div>
+<div class="listrow"><div class="date"><b>১৫</b>নভেম্বর</div><div><strong>নতুন ভর্তি</strong><small>১৫ নভেম্বর, ২০২৬</small></div></div>
+<div class="listrow"><div class="date"><b>২৫</b>নভেম্বর</div><div><strong>বকেয়া পরিশোধ</strong><small>শেষ তারিখ: ২৫ নভেম্বর, ২০২৬</small></div></div>
+<div class="listrow"><div class="date"><b>০১</b>ডিসেম্বর</div><div><strong>ফাইনাল সেমিস্টার পরীক্ষা</strong><small>১ ডিসেম্বর, ২০২৬</small></div></div>
 </div><div class="panel"><h3>সংবাদ ও কার্যক্রম</h3><img src="assets/news.jpg" alt="বিদ্যালয়ের সংবাদ" style="width:100%;height:145px;object-fit:cover;border-radius:8px;background:#dce9e1"><p style="color:var(--muted);font-size:13px">বার্ষিক অনুষ্ঠান, শিক্ষার্থীদের অর্জন, প্রতিযোগিতা ও বিদ্যালয়ের গুরুত্বপূর্ণ কার্যক্রমের সংবাদ এখানে প্রকাশ করুন।</p><a class="btn primary" href="#gallery">গ্যালারি দেখুন →</a></div></div>
 </div></section>
 
@@ -205,7 +215,7 @@ html{scroll-padding-top:90px}.menu{display:block}.nav{flex-wrap:nowrap;padding:0
 <div class="contactitem"><div class="symbol">⌖</div><div><b>ঠিকানা</b><span>মছজিদ্দা গ্রামার স্কুল, ছোট কুমিরা, সীতাকুণ্ড, চট্টগ্রাম।</span></div></div>
 <div class="contactitem"><div class="symbol">☎</div><div><b>মোবাইল</b><span><a href="tel:09649978797">09649-978797</a><br><a href="tel:01880187187">01880-187187</a></span></div></div>
 <div class="contactitem"><div class="symbol">✉</div><div><b>ই-মেইল</b><span><a href="mailto:mgschool3@gmail.com">mgschool3@gmail.com</a></span></div></div>
-<div class="contactitem"><div class="symbol">◷</div><div><b>অফিস সময়</b><span>সঠিক অফিস সময় স্কুল কর্তৃপক্ষের কাছ থেকে নিশ্চিত করে যুক্ত করুন।</span></div></div>
+<div class="contactitem"><div class="symbol">◷</div><div><b>অফিস সময়</b><span>শনি–বৃহস্পতিবার<br>সকাল ৮:৪০ থেকে দুপুর ২:০০ টা পর্যন্ত</span></div></div>
 </div><div class="map"><div><div style="font-size:34px">⌖</div><b>Find Masjidda Grammar School</b><p>Google Maps-এ স্কুলের সঠিক লোকেশন দেখতে নিচের লিংক যুক্ত করুন।</p><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Masjidda+Grammar+School+Choto+Kumira+Sitakunda" target="_blank" rel="noopener">Google Maps খুলুন ↗</a></div></div></div>
 </div></section>
 </main>
@@ -217,7 +227,7 @@ html{scroll-padding-top:90px}.menu{display:block}.nav{flex-wrap:nowrap;padding:0
 <div><h4>যোগাযোগ</h4><div class="footlinks"><span>ছোট কুমিরা, সীতাকুণ্ড</span><a href="tel:09649978797">09649-978797</a><a href="mailto:mgschool3@gmail.com">mgschool3@gmail.com</a><a href="#contact">Google Maps</a></div></div>
 </div><div class="copyright"><span>© <span id="year"></span> মছজিদ্দা গ্রামার স্কুল। সর্বস্বত্ব সংরক্ষিত।</span><span>Official School Website · Masjidda Grammar School</span></div></div></footer>
 
-<div class="fixed"><a class="f-adm" href="https://forms.gle/YZbGRg7dq4JRbjUb8" target="_blank" rel="noopener">▣ অনলাইন ভর্তি</a><a class="f-msg" href="https://wa.me/8801875978797" target="_blank" rel="noopener">▣ বার্তা প্রেরণ</a></div>
+<div class="fixed"><a class="f-adm" href="https://forms.gle/YZbGRg7dq4JRbjUb8" target="_blank" rel="noopener" aria-label="অনলাইন ভর্তি"><i>✎</i><span>অনলাইন ভর্তি</span></a><a class="f-msg" href="https://wa.me/8801875978797" target="_blank" rel="noopener" aria-label="বার্তা প্রেরণ"><i>✉</i><span>বার্তা প্রেরণ</span></a></div>
 <script>
 const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
 menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
@@ -227,6 +237,7 @@ links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navGroups
 document.addEventListener('click',event=>{if(!links.contains(event.target)){navGroups.forEach(group=>{group.classList.remove('open');group.querySelector('.navparent').setAttribute('aria-expanded','false')})}});
 document.getElementById('year').textContent=new Date().getFullYear();
 const hdr=document.querySelector('header');const onS=()=>hdr.classList.toggle('compact',scrollY>60);onS();addEventListener('scroll',onS,{passive:true});
+const nb=document.querySelector('.newsbar');const setNb=()=>document.documentElement.style.setProperty('--nb',nb.offsetHeight+'px');setNb();addEventListener('resize',setNb);addEventListener('load',setNb);
 document.documentElement.classList.add('js');
 const rv=[...document.querySelectorAll('.heading,.card,.profile,.action,.feature,.panel,.contactitem,.map,.about>*,.stat,.gallery img')];rv.forEach(e=>e.classList.add('reveal'));
 if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});rv.forEach(e=>io.observe(e))}else rv.forEach(e=>e.classList.add('in'));
